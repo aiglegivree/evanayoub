@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ayoub Evan | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website for Ayoub Evan: projects, skills, contact details, and CV."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ayoub Evan portfolio home">
+        <span class="brand-mark">AE</span>
+        <span>Ayoub Evan</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Projects, experiments, and the work I am building.</h1>
+          <p>
+            I am a developer focused on practical web experiences, clean interfaces,
+            and projects that turn ideas into working products.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="cv.html">Open CV</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/projects/project-1.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="section intro" aria-label="Profile summary">
+        <div>
+          <p class="section-label">About</p>
+          <h2>Hi, I am Ayoub.</h2>
+        </div>
+        <p>
+          Replace this text with a short introduction: what you study or do, the
+          technologies you enjoy, and the type of opportunities you are looking for.
+        </p>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="section-label">Selected Work</p>
+          <h2>Projects</h2>
+        </div>
+        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section split" id="cv">
+        <div>
+          <p class="section-label">CV</p>
+          <h2>Experience and education</h2>
+          <p>
+            A readable CV page is included. Update the highlights below in
+            <strong>script.js</strong>, or add a PDF later if you want one.
+          </p>
+          <a class="button primary" href="cv.html">Open CV</a>
+        </div>
+        <div class="timeline" id="cvHighlights" aria-label="CV highlights"></div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Let us build something useful.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="https://github.com/aiglegivree">GitHub</a>
+          <a href="https://www.linkedin.com/">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with HTML, CSS, and a little JavaScript. Hosted on GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
