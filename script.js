@@ -14,10 +14,10 @@ const content = {
     },
     home: {
       hero: {
-        eyebrow: "EPFL Robotics · Data Science · Engineering",
-        title: "Final-year robotics engineering student building toward autonomous systems.",
+        eyebrow: "Final-year robotics engineering student",
+        title: "Evan Ayoub",
         text:
-          "I bring together electronics, coding, computer vision, CAD, and mechanics to design practical robotic systems.",
+          "Robotics student at EPFL with a Data Science minor, interested in electronics, coding, computer vision, CAD, and mechanics.",
         primary: "View projects",
         secondary: "Open CV",
       },
@@ -268,10 +268,10 @@ const content = {
     },
     home: {
       hero: {
-        eyebrow: "EPFL Robotique · Data Science · Ingénierie",
-        title: "Étudiant ingénieur en dernière année de robotique, orienté systèmes autonomes.",
+        eyebrow: "Étudiant ingénieur en dernière année de robotique",
+        title: "Evan Ayoub",
         text:
-          "Je relie électronique, code, vision par ordinateur, CAO et mécanique pour concevoir des systèmes robotiques concrets.",
+          "Étudiant en robotique à l'EPFL avec une mineure en Data Science, intéressé par l'électronique, le code, la vision par ordinateur, la CAO et la mécanique.",
         primary: "Voir les projets",
         secondary: "Ouvrir le CV",
       },
