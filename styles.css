@@ -152,7 +152,7 @@ nav a:hover,
 }
 
 .hero-copy {
-  max-width: 58rem;
+  max-width: 62rem;
 }
 
 .eyebrow,
@@ -173,10 +173,10 @@ p {
 }
 
 h1 {
-  max-width: 13ch;
+  max-width: 17ch;
   margin-bottom: 1.25rem;
-  font-size: clamp(3rem, 8vw, 6.7rem);
-  line-height: 0.95;
+  font-size: clamp(2.75rem, 6.4vw, 5.4rem);
+  line-height: 1;
 }
 
 h2 {
@@ -448,7 +448,7 @@ footer p {
   }
 
   h1 {
-    max-width: 11ch;
+    max-width: 15ch;
   }
 
   .projects-grid,
@@ -488,7 +488,7 @@ footer p {
   }
 
   h1 {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
   }
 
   .projects-grid,

@@ -14,18 +14,18 @@ const content = {
     },
     home: {
       hero: {
-        eyebrow: "Robotics & Microengineering",
-        title: "I build autonomous systems, electronics, and useful web tools.",
+        eyebrow: "EPFL Robotics · Data Science · Engineering",
+        title: "Final-year robotics engineering student building toward autonomous systems.",
         text:
-          "Master's student in Robotics at EPFL with a Data Science minor, focused on computer vision, embedded systems, PCB design, and applied machine learning.",
+          "I bring together electronics, coding, computer vision, CAD, and mechanics to design practical robotic systems.",
         primary: "View projects",
         secondary: "Open CV",
       },
       about: {
         label: "About",
-        title: "Hi, I am Ayoub.",
+        title: "Hi, I am Evan.",
         text:
-          "I am a French and Lebanese engineer-in-training working at the intersection of robotics, electronics, and software. I like projects where perception, control, and clean interfaces meet in a real working system.",
+          "I am a final-year university engineering student in robotics with a minor in Data Science. I like the full stack of robotics: electronics, code, vision, CAD, mechanics, and the small engineering choices that make a system actually work.",
       },
       projects: {
         label: "Selected Work",
@@ -55,7 +55,7 @@ const content = {
     cv: {
       label: "Curriculum Vitae",
       summary:
-        "Robotics Master's student at EPFL with a Data Science minor and a Microengineering Bachelor's degree. Interested in autonomous robotics, computer vision, embedded systems, and applied AI.",
+        "Final-year robotics engineering student at EPFL with a Data Science minor and a Microengineering Bachelor's degree. Interested in electronics, coding, computer vision, CAD, mechanics, autonomous robotics, and applied AI.",
       transcript: "Academic record",
       contact: { title: "Contact" },
       skills: {
@@ -268,18 +268,18 @@ const content = {
     },
     home: {
       hero: {
-        eyebrow: "Robotique & Microtechnique",
-        title: "Je construis des systèmes autonomes, de l'électronique et des outils web utiles.",
+        eyebrow: "EPFL Robotique · Data Science · Ingénierie",
+        title: "Étudiant ingénieur en dernière année de robotique, orienté systèmes autonomes.",
         text:
-          "Étudiant en Master de Robotique à l'EPFL, avec une mineure en Data Science, intéressé par la vision par ordinateur, les systèmes embarqués, le design PCB et l'apprentissage automatique appliqué.",
+          "Je relie électronique, code, vision par ordinateur, CAO et mécanique pour concevoir des systèmes robotiques concrets.",
         primary: "Voir les projets",
         secondary: "Ouvrir le CV",
       },
       about: {
         label: "À propos",
-        title: "Bonjour, je suis Ayoub.",
+        title: "Bonjour, je suis Evan.",
         text:
-          "Je suis un ingénieur en formation franco-libanais, à l'intersection de la robotique, de l'électronique et du logiciel. J'aime les projets où perception, contrôle et interfaces propres se rencontrent dans un système concret.",
+          "Je suis étudiant ingénieur en dernière année de robotique, avec une mineure en Data Science. J'aime toute la chaîne de la robotique : électronique, code, vision, CAO, mécanique, et les choix d'ingénierie qui font fonctionner un système réel.",
       },
       projects: {
         label: "Sélection",
@@ -309,7 +309,7 @@ const content = {
     cv: {
       label: "Curriculum Vitae",
       summary:
-        "Étudiant en Master de Robotique à l'EPFL avec une mineure en Data Science et un Bachelor en Microtechnique. Intéressé par la robotique autonome, la vision par ordinateur, les systèmes embarqués et l'IA appliquée.",
+        "Étudiant ingénieur en dernière année de robotique à l'EPFL, avec une mineure en Data Science et un Bachelor en Microtechnique. Intéressé par l'électronique, le code, la vision par ordinateur, la CAO, la mécanique, la robotique autonome et l'IA appliquée.",
       transcript: "Relevé de notes",
       contact: { title: "Contact" },
       skills: {
