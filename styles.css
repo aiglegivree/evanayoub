@@ -311,6 +311,17 @@ h3 {
   color: var(--muted);
 }
 
+.project-inline-link {
+  display: inline-block;
+  margin-left: 0.25rem;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.project-inline-link:hover {
+  color: var(--accent-strong);
+}
+
 .project-carousel {
   position: relative;
   display: grid;

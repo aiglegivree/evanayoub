@@ -103,7 +103,14 @@ const content = {
         title: "Copycat Portfolios",
         description:
           "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
-        image: "assets/projects/project-3.svg",
+        websiteUrl: "https://ada-2025-project-adaptateurusbversu.vercel.app/",
+        websiteLabel: "Open project website",
+        image: "assets/projects/copycat/img1.png",
+        gallery: [
+          "assets/projects/copycat/img1.png",
+          "assets/projects/copycat/img2.png",
+          "assets/projects/copycat/img3.png",
+        ],
         tags: ["Statistics", "Data Analysis", "Web Demo"],
       },
     ],
@@ -359,7 +366,14 @@ const content = {
         title: "Copycat Portfolios",
         description:
           "Projet EPFL d'analyse statistique de données financières, de choix de stratégie d'investissement et d'étude de la performance des transactions politiques, livré avec un site de démonstration.",
-        image: "assets/projects/project-3.svg",
+        websiteUrl: "https://ada-2025-project-adaptateurusbversu.vercel.app/",
+        websiteLabel: "Ouvrir le site du projet",
+        image: "assets/projects/copycat/img1.png",
+        gallery: [
+          "assets/projects/copycat/img1.png",
+          "assets/projects/copycat/img2.png",
+          "assets/projects/copycat/img3.png",
+        ],
         tags: ["Statistiques", "Analyse de données", "Site démo"],
       },
     ],
@@ -582,7 +596,14 @@ function renderProjects(language) {
           </div>
           <div class="project-body">
             <h3>${project.title}</h3>
-            <p>${project.description}</p>
+            <p>
+              ${project.description}
+              ${
+                project.websiteUrl
+                  ? `<a class="project-inline-link" href="${project.websiteUrl}" target="_blank" rel="noreferrer">${project.websiteLabel}</a>.`
+                  : ""
+              }
+            </p>
             <div class="tags" aria-label="Technologies used">
               ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
             </div>
