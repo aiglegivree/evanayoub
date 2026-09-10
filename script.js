@@ -78,11 +78,17 @@ const content = {
     },
     projects: [
       {
-        title: "Robopoly Robotics Competition",
+        title: "Valobot - Robopoly Robotics Competition",
         description:
           "Winner of the EPFL Robopoly robotics competition with an autonomous robot relying only on camera vision. The robot handled line tracking, corridor tracking, and target shooting autonomously.",
-        image: "assets/projects/project-1.svg",
-        tags: ["Robotics", "Camera Vision", "Control"],
+        image: "assets/projects/valobot/img2.jpg",
+        gallery: [
+          "assets/projects/valobot/img3.jpg",
+          "assets/projects/valobot/img4.jpg",
+          "assets/projects/valobot/img5.jpg",
+          "assets/projects/valobot/img1.jpg",
+        ],
+        tags: ["Valobot", "Robotics", "Camera Vision", "Control"],
         demoUrl: "assets/cv/CV_2026_en.pdf",
         sourceUrl: "https://github.com/aiglegivree",
       },
@@ -332,11 +338,17 @@ const content = {
     },
     projects: [
       {
-        title: "Concours de robotique Robopoly",
+        title: "Valobot - Concours de robotique Robopoly",
         description:
           "Vainqueur du concours de robotique Robopoly à l'EPFL avec un robot autonome basé uniquement sur la vision par caméra. Le robot réalisait suivi de ligne, suivi de couloir et tir sur cible.",
-        image: "assets/projects/project-1.svg",
-        tags: ["Robotique", "Vision caméra", "Contrôle"],
+        image: "assets/projects/valobot/img2.jpg",
+        gallery: [
+          "assets/projects/valobot/img3.jpg",
+          "assets/projects/valobot/img4.jpg",
+          "assets/projects/valobot/img5.jpg",
+          "assets/projects/valobot/img1.jpg",
+        ],
+        tags: ["Valobot", "Robotique", "Vision caméra", "Contrôle"],
         demoUrl: "assets/cv/CV_2026_fr.pdf",
         sourceUrl: "https://github.com/aiglegivree",
       },
@@ -568,6 +580,15 @@ function renderProjects(language) {
           <div class="project-body">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
+            ${
+              project.gallery
+                ? `<div class="project-gallery" aria-label="${project.title} gallery">
+                    ${project.gallery
+                      .map((image, index) => `<img src="${image}" alt="${project.title} photo ${index + 1}" />`)
+                      .join("")}
+                  </div>`
+                : ""
+            }
             <div class="tags" aria-label="Technologies used">
               ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
             </div>
