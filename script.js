@@ -566,22 +566,19 @@ function renderProjects(language) {
       const images = project.gallery || [project.image];
       return `
         <article class="project-card">
-          <div class="project-mosaic" aria-label="${project.title} photos">
-            ${images
-              .map(
-                (image, imageIndex) => `
-                  <button
-                    class="project-photo ${imageIndex === 0 ? "feature" : ""}"
-                    type="button"
-                    data-project-index="${projectIndex}"
-                    data-image-index="${imageIndex}"
-                    aria-label="${project.title} photo ${imageIndex + 1}"
-                  >
-                    <img src="${image}" alt="${project.title} photo ${imageIndex + 1}" />
-                  </button>
-                `
-              )
-              .join("")}
+          <div class="project-carousel" data-carousel-project="${projectIndex}" aria-label="${project.title} photos">
+            <button class="carousel-nav previous" type="button" data-carousel-step="-1" aria-label="Previous ${project.title} photo">‹</button>
+            <button
+              class="carousel-image"
+              type="button"
+              data-project-index="${projectIndex}"
+              data-image-index="0"
+              aria-label="Open ${project.title} photo 1"
+            >
+              <img src="${images[0]}" alt="${project.title} photo 1" />
+            </button>
+            <button class="carousel-nav next" type="button" data-carousel-step="1" aria-label="Next ${project.title} photo">›</button>
+            <div class="carousel-count" aria-live="polite">1/${images.length}</div>
           </div>
           <div class="project-body">
             <h3>${project.title}</h3>
@@ -595,7 +592,7 @@ function renderProjects(language) {
     })
     .join("");
 
-  bindProjectLightbox(language);
+  bindProjectCarousels(language);
 }
 
 function projectImages(project) {
@@ -638,10 +635,30 @@ const lightboxState = {
   imageIndex: 0,
 };
 
-function bindProjectLightbox(language) {
-  document.querySelectorAll("[data-project-index]").forEach((button) => {
-    button.addEventListener("click", () => {
-      openLightbox(language, Number(button.dataset.projectIndex), Number(button.dataset.imageIndex));
+function bindProjectCarousels(language) {
+  document.querySelectorAll("[data-carousel-project]").forEach((carousel) => {
+    const projectIndex = Number(carousel.dataset.carouselProject);
+    const project = content[language].projects[projectIndex];
+    const images = projectImages(project);
+    const imageButton = carousel.querySelector(".carousel-image");
+    const image = imageButton.querySelector("img");
+    const count = carousel.querySelector(".carousel-count");
+
+    carousel.querySelectorAll("[data-carousel-step]").forEach((button) => {
+      button.hidden = images.length < 2;
+      button.addEventListener("click", () => {
+        const nextIndex = (Number(imageButton.dataset.imageIndex) + Number(button.dataset.carouselStep) + images.length) % images.length;
+        imageButton.dataset.imageIndex = String(nextIndex);
+        imageButton.setAttribute("aria-label", `Open ${project.title} photo ${nextIndex + 1}`);
+        image.src = images[nextIndex];
+        image.alt = `${project.title} photo ${nextIndex + 1}`;
+        count.textContent = `${nextIndex + 1}/${images.length}`;
+      });
+    });
+
+    count.hidden = images.length < 2;
+    imageButton.addEventListener("click", () => {
+      openLightbox(language, projectIndex, Number(imageButton.dataset.imageIndex));
     });
   });
 }
