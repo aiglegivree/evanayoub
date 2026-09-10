@@ -4,11 +4,10 @@ Static portfolio website for GitHub Pages.
 
 ## Edit Your Content
 
-- Update profile text, email, LinkedIn, and GitHub links in `index.html`.
-- Update projects and CV highlights in `script.js`.
-- Update the full CV content in `cv.html`.
+- Update bilingual profile text, projects, CV highlights, and academic results in `script.js`.
+- Update structure or links in `index.html` and `cv.html`.
 - Replace project placeholders inside `assets/projects/`.
-- Optionally add your real CV PDF at `assets/cv/ayoub-evan-cv.pdf`.
+- Replace CV PDFs in `assets/cv/` and the academic record in `assets/academic/`.
 
 ## Publish With GitHub Pages
 

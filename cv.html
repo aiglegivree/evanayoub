@@ -7,79 +7,95 @@
     <meta name="description" content="CV for Ayoub Evan." />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="cv">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Back to portfolio">
         <span class="brand-mark">AE</span>
         <span>Ayoub Evan</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="index.html#projects">Projects</a>
-        <a href="cv.html">CV</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Main navigation">
+          <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#academics" data-i18n="nav.academics">Academic Results</a>
+          <a href="cv.html" data-i18n="nav.cv">CV</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="language-switch" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="section cv-page">
         <div class="cv-header">
-          <p class="section-label">Curriculum Vitae</p>
+          <p class="section-label" data-i18n="cv.label">Curriculum Vitae</p>
           <h1>Ayoub Evan</h1>
-          <p>
-            Developer profile. Replace this text with your current role, location,
-            preferred technologies, and the type of opportunity you want.
+          <p data-i18n="cv.summary">
+            Robotics Master's student at EPFL with a Data Science minor and a Microengineering
+            Bachelor's degree. Interested in autonomous robotics, computer vision, embedded systems,
+            and applied AI.
           </p>
+          <div class="document-actions">
+            <a class="button primary" href="assets/cv/CV_2026_en.pdf" target="_blank" rel="noreferrer" data-doc="cv-en">
+              CV PDF
+            </a>
+            <a class="button secondary" href="assets/cv/CV_2026_fr.pdf" target="_blank" rel="noreferrer" data-doc="cv-fr">
+              CV PDF FR
+            </a>
+            <a class="button secondary" href="assets/academic/relevenote.pdf" target="_blank" rel="noreferrer" data-i18n="cv.transcript">
+              Academic record
+            </a>
+          </div>
         </div>
 
         <div class="cv-layout">
           <aside class="cv-sidebar">
             <section>
-              <h2>Contact</h2>
-              <p>your.email@example.com</p>
+              <h2 data-i18n="cv.contact.title">Contact</h2>
+              <p>ayoubevan13@gmail.com</p>
               <p>github.com/aiglegivree</p>
-              <p>linkedin.com/in/your-profile</p>
+              <p>linkedin.com/in/evan-joseph-gerard-ayoub</p>
             </section>
             <section>
-              <h2>Skills</h2>
-              <p>HTML, CSS, JavaScript, Git, GitHub</p>
-              <p>Add your frameworks, languages, and tools here.</p>
+              <h2 data-i18n="cv.skills.title">Skills</h2>
+              <p data-i18n="cv.skills.technical">
+                Mobile robotics, computer vision, image processing, embedded systems, PCB design.
+              </p>
+              <p data-i18n="cv.skills.programming">
+                Python, C/C++, OpenCV, NumPy, Pandas, Git, PyTorch, TensorFlow.
+              </p>
+              <p data-i18n="cv.skills.tools">
+                MATLAB, Webots, Catia, KiCad, LTspice, Codex, Raspberry Pi, Arduino.
+              </p>
             </section>
             <section>
-              <h2>Languages</h2>
-              <p>French, English</p>
+              <h2 data-i18n="cv.languages.title">Languages</h2>
+              <p data-i18n="cv.languages.items">French and Lebanese: native. English: C2. Spanish: B2.</p>
             </section>
           </aside>
 
           <div class="cv-main">
             <section>
-              <h2>Experience</h2>
-              <article class="timeline-item">
-                <time>2026</time>
-                <h3>Project or role title</h3>
-                <p>
-                  Describe what you built, the technologies used, and the result.
-                </p>
-              </article>
-              <article class="timeline-item">
-                <time>2025</time>
-                <h3>Project or role title</h3>
-                <p>
-                  Add another professional, academic, or personal technical project.
-                </p>
-              </article>
+              <h2 data-i18n="cv.education.title">Education</h2>
+              <div class="timeline" id="educationList"></div>
             </section>
 
             <section>
-              <h2>Education</h2>
-              <article class="timeline-item">
-                <time>Year - Year</time>
-                <h3>School or training name</h3>
-                <p>Diploma, certification, program, or important coursework.</p>
-              </article>
+              <h2 data-i18n="cv.experience.title">Experience</h2>
+              <div class="timeline" id="experienceList"></div>
+            </section>
+
+            <section>
+              <h2 data-i18n="cv.projects.title">Projects and awards</h2>
+              <div class="timeline" id="cvProjectsList"></div>
             </section>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -6,35 +6,42 @@
     <title>Ayoub Evan | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio website for Ayoub Evan: projects, skills, contact details, and CV."
+      content="Portfolio website for Ayoub Evan: robotics, microengineering, projects, academic results, and CV."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Ayoub Evan portfolio home">
         <span class="brand-mark">AE</span>
         <span>Ayoub Evan</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Main navigation">
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#academics" data-i18n="nav.academics">Academic Results</a>
+          <a href="#cv" data-i18n="nav.cv">CV</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="language-switch" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Portfolio</p>
-          <h1>Projects, experiments, and the work I am building.</h1>
-          <p>
-            I am a developer focused on practical web experiences, clean interfaces,
-            and projects that turn ideas into working products.
+          <p class="eyebrow" data-i18n="home.hero.eyebrow">Robotics & Microengineering</p>
+          <h1 data-i18n="home.hero.title">I build autonomous systems, electronics, and useful web tools.</h1>
+          <p data-i18n="home.hero.text">
+            Master's student in Robotics at EPFL with a Data Science minor, focused on computer vision,
+            embedded systems, PCB design, and applied machine learning.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="cv.html">Open CV</a>
+            <a class="button primary" href="#projects" data-i18n="home.hero.primary">View projects</a>
+            <a class="button secondary" href="cv.html" data-i18n="home.hero.secondary">Open CV</a>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
@@ -44,51 +51,71 @@
 
       <section class="section intro" aria-label="Profile summary">
         <div>
-          <p class="section-label">About</p>
-          <h2>Hi, I am Ayoub.</h2>
+          <p class="section-label" data-i18n="home.about.label">About</p>
+          <h2 data-i18n="home.about.title">Hi, I am Ayoub.</h2>
         </div>
-        <p>
-          Replace this text with a short introduction: what you study or do, the
-          technologies you enjoy, and the type of opportunities you are looking for.
+        <p data-i18n="home.about.text">
+          I am a French and Lebanese engineer-in-training working at the intersection of robotics,
+          electronics, and software. I like projects where perception, control, and clean interfaces
+          meet in a real working system.
         </p>
       </section>
 
       <section class="section" id="projects">
         <div class="section-heading">
-          <p class="section-label">Selected Work</p>
-          <h2>Projects</h2>
+          <p class="section-label" data-i18n="home.projects.label">Selected Work</p>
+          <h2 data-i18n="home.projects.title">Projects</h2>
         </div>
         <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
       </section>
 
+      <section class="section" id="academics">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.academics.label">Academic Results</p>
+          <h2 data-i18n="home.academics.title">Education and results</h2>
+        </div>
+        <div class="academic-grid" id="academicResults"></div>
+        <div class="document-actions">
+          <a class="button primary" href="assets/academic/relevenote.pdf" target="_blank" rel="noreferrer" data-i18n="home.academics.transcript">
+            Open academic record
+          </a>
+          <a class="button secondary" href="assets/cv/CV_2026_en.pdf" target="_blank" rel="noreferrer" data-doc="cv-en">
+            CV PDF
+          </a>
+          <a class="button secondary" href="assets/cv/CV_2026_fr.pdf" target="_blank" rel="noreferrer" data-doc="cv-fr">
+            CV PDF FR
+          </a>
+        </div>
+      </section>
+
       <section class="section split" id="cv">
         <div>
-          <p class="section-label">CV</p>
-          <h2>Experience and education</h2>
-          <p>
-            A readable CV page is included. Update the highlights below in
-            <strong>script.js</strong>, or add a PDF later if you want one.
+          <p class="section-label" data-i18n="home.cv.label">CV</p>
+          <h2 data-i18n="home.cv.title">Experience and skills</h2>
+          <p data-i18n="home.cv.text">
+            Robotics projects, tutoring and teaching assistant experience, embedded electronics,
+            data analysis, and technical tools.
           </p>
-          <a class="button primary" href="cv.html">Open CV</a>
+          <a class="button primary" href="cv.html" data-i18n="home.cv.link">Open CV page</a>
         </div>
         <div class="timeline" id="cvHighlights" aria-label="CV highlights"></div>
       </section>
 
       <section class="section contact" id="contact">
         <div>
-          <p class="section-label">Contact</p>
-          <h2>Let us build something useful.</h2>
+          <p class="section-label" data-i18n="home.contact.label">Contact</p>
+          <h2 data-i18n="home.contact.title">Let us build something useful.</h2>
         </div>
         <div class="contact-links">
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
-          <a href="https://github.com/aiglegivree">GitHub</a>
-          <a href="https://www.linkedin.com/">LinkedIn</a>
+          <a href="mailto:ayoubevan13@gmail.com">ayoubevan13@gmail.com</a>
+          <a href="https://github.com/aiglegivree" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/evan-joseph-gerard-ayoub" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Built with HTML, CSS, and a little JavaScript. Hosted on GitHub Pages.</p>
+      <p data-i18n="footer">Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
     </footer>
 
     <script src="script.js"></script>

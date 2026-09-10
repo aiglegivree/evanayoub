@@ -54,7 +54,10 @@ img {
 .brand,
 nav,
 .hero-actions,
-.contact-links {
+.contact-links,
+.header-actions,
+.language-switch,
+.document-actions {
   display: flex;
   align-items: center;
 }
@@ -80,6 +83,37 @@ nav {
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 650;
+}
+
+.header-actions {
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.language-switch {
+  overflow: hidden;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.language-switch button {
+  min-width: 2.6rem;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.65rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
 }
 
 nav a:hover,
@@ -211,6 +245,12 @@ h3 {
   gap: 1rem;
 }
 
+.academic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .project-card {
   overflow: hidden;
   background: var(--surface);
@@ -289,6 +329,12 @@ h3 {
 .contact-links {
   flex-wrap: wrap;
   gap: 0.8rem;
+}
+
+.document-actions {
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
 }
 
 .contact-links a {
@@ -374,6 +420,10 @@ footer p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .academic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .cv-layout {
     grid-template-columns: 1fr;
   }
@@ -385,16 +435,28 @@ footer p {
     flex-direction: column;
   }
 
+  .header-actions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
   nav {
     width: 100%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .language-switch {
+    align-self: flex-start;
   }
 
   h1 {
     font-size: 3.25rem;
   }
 
-  .projects-grid {
+  .projects-grid,
+  .academic-grid {
     grid-template-columns: 1fr;
   }
 }
