@@ -2,6 +2,7 @@ const content = {
   en: {
     nav: {
       projects: "Projects",
+      skills: "Skills",
       academics: "Academic Results",
       cv: "CV",
       contact: "Contact",
@@ -29,6 +30,10 @@ const content = {
       projects: {
         label: "Selected Work",
         title: "Projects",
+      },
+      skills: {
+        label: "Technical Profile",
+        title: "Skills",
       },
       academics: {
         label: "Academic Results",
@@ -69,34 +74,53 @@ const content = {
       education: { title: "Education" },
       experience: { title: "Experience" },
       projects: { title: "Projects and awards" },
+      activities: { title: "Activities" },
     },
     projects: [
       {
         title: "Robopoly Robotics Competition",
         description:
-          "Winner of the EPFL Robopoly robotics competition with an autonomous robot based only on camera vision for line tracking, corridor tracking, and target shooting.",
+          "Winner of the EPFL Robopoly robotics competition with an autonomous robot relying only on camera vision. The robot handled line tracking, corridor tracking, and target shooting autonomously.",
         image: "assets/projects/project-1.svg",
-        tags: ["Robotics", "Computer Vision", "Autonomy"],
+        tags: ["Robotics", "Camera Vision", "Control"],
         demoUrl: "assets/cv/CV_2026_en.pdf",
         sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Sola Project MPPT and Power Circuit",
         description:
-          "Design and assembly of the power circuit PCB, including the maximum power point tracker for a solar aircraft within Sola Project.",
+          "Power electronics work for a solar aircraft: design and assembly of the power circuit PCB, with a focus on the maximum power point tracker.",
         image: "assets/projects/project-2.svg",
-        tags: ["PCB", "Electronics", "Solar"],
+        tags: ["PCB Design", "MPPT", "Embedded Electronics"],
         demoUrl: "assets/cv/CV_2026_en.pdf",
         sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Copycat Portfolios",
         description:
-          "EPFL group project analyzing financial data, investment strategies, and whether political trades pay off, delivered with a demonstration website.",
+          "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
         image: "assets/projects/project-3.svg",
-        tags: ["Data Analysis", "Statistics", "Web"],
+        tags: ["Statistics", "Data Analysis", "Web Demo"],
         demoUrl: "assets/cv/CV_2026_en.pdf",
         sourceUrl: "https://github.com/aiglegivree",
+      },
+    ],
+    skillsList: [
+      {
+        title: "Robotics and perception",
+        items: ["Mobile robotics", "Computer vision", "Image processing", "FPV drones"],
+      },
+      {
+        title: "Electronics and embedded systems",
+        items: ["PCB design", "Raspberry Pi", "Arduino", "Sensors", "Batteries", "Motors"],
+      },
+      {
+        title: "Data and AI",
+        items: ["Data analysis", "Machine learning", "Deep learning", "PyTorch", "TensorFlow"],
+      },
+      {
+        title: "Programming and tools",
+        items: ["Python", "C/C++", "OpenCV", "NumPy", "Pandas", "Git", "MATLAB", "Webots", "Catia", "KiCad", "LTspice"],
       },
     ],
     academics: [
@@ -127,19 +151,19 @@ const content = {
         date: "2025 - 2026",
         title: "Robopoly robotics competition winner",
         description:
-          "Built an autonomous camera-based robot for line tracking, corridor tracking, and target shooting.",
+          "Built a camera-only autonomous robot for line tracking, corridor navigation, and target shooting.",
       },
       {
         date: "2024 - current",
         title: "Sola Project electronics",
         description:
-          "Responsible for the power circuit PCB and MPPT of a solar aircraft project.",
+          "Designed and assembled the power circuit PCB and MPPT for a solar aircraft project.",
       },
       {
         date: "2023 - current",
         title: "Tutoring and TA experience",
         description:
-          "Tutor in mathematics, physics, and electronics; teaching assistant for electrical systems and mechanical physics courses.",
+          "Tutoring in mathematics, physics, and electronics; EPFL teaching assistant work in electrical systems and mechanical physics.",
       },
     ],
     education: [
@@ -170,19 +194,19 @@ const content = {
         date: "September 2023 - current",
         title: "Tutoring and Teaching Assistant Experience",
         description:
-          "Tutor for students from elementary school to apprenticeship and gymnasium levels. TA for EPFL electrical and electronic systems and mechanical physics courses.",
+          "Tutor for students from elementary school to apprenticeship and gymnasium levels through Apprenons Ensemble. Teaching assistant for EPFL electrical and electronic systems and mechanical physics courses.",
       },
       {
         date: "April 2022",
         title: "Observation Internship - Shark Robotics",
         description:
-          "Observation internship discovering the R&D work and organization of a robotics company.",
+          "Observation internship exploring the R&D work, engineering environment, and organization of a robotics company.",
       },
       {
         date: "September 2020 - July 2022",
         title: "Programming and Mathematics Courses",
         description:
-          "Introduced high school students to programming, especially Python, and applications of mathematics in code.",
+          "Introduced high school students to programming, especially Python, and to practical applications of mathematics in code.",
       },
     ],
     cvProjects: [
@@ -196,13 +220,13 @@ const content = {
         date: "March 2024 - current",
         title: "Sola Project - MPPT and Power Circuit",
         description:
-          "Responsible for the design and assembly of the power circuit PCB, especially the maximum power point tracker for a solar aircraft.",
+          "Responsible for the design and assembly of the power circuit PCB, especially the maximum power point tracker for a solar aircraft as part of the Sola Project association.",
       },
       {
         date: "September 2025 - December 2025",
         title: "Copycat Portfolios - EPFL",
         description:
-          "Financial data analysis, investment strategy selection, and demo website for the question: do political trades pay off?",
+          "Financial data analysis, investment strategy selection, and demonstration website for the question: do political trades pay off?",
       },
       {
         date: "2022",
@@ -211,10 +235,28 @@ const content = {
           "Participant in the General Mathematics Competition and winner of the Lions Club Physics Competition.",
       },
     ],
+    activities: [
+      {
+        date: "September 2021 - current",
+        title: "Chief Scout",
+        description: "Leadership and youth supervision experience as a scout leader.",
+      },
+      {
+        date: "2017 - current",
+        title: "Lyric evening association of Sanxay",
+        description: "Member of the association supporting lyrical evening events in Sanxay.",
+      },
+      {
+        date: "Sports and music",
+        title: "Personal interests",
+        description: "Handball, sailing, trumpet, guitar, and judo with a brown belt.",
+      },
+    ],
   },
   fr: {
     nav: {
       projects: "Projets",
+      skills: "Compétences",
       academics: "Résultats académiques",
       cv: "CV",
       contact: "Contact",
@@ -242,6 +284,10 @@ const content = {
       projects: {
         label: "Sélection",
         title: "Projets",
+      },
+      skills: {
+        label: "Profil technique",
+        title: "Compétences",
       },
       academics: {
         label: "Résultats académiques",
@@ -282,34 +328,53 @@ const content = {
       education: { title: "Formation" },
       experience: { title: "Expérience" },
       projects: { title: "Projets et concours" },
+      activities: { title: "Activités" },
     },
     projects: [
       {
         title: "Concours de robotique Robopoly",
         description:
-          "Vainqueur du concours de robotique Robopoly à l'EPFL avec un robot autonome basé uniquement sur la vision par caméra, réalisant suivi de ligne, suivi de couloir et tir sur cible.",
+          "Vainqueur du concours de robotique Robopoly à l'EPFL avec un robot autonome basé uniquement sur la vision par caméra. Le robot réalisait suivi de ligne, suivi de couloir et tir sur cible.",
         image: "assets/projects/project-1.svg",
-        tags: ["Robotique", "Vision", "Autonomie"],
+        tags: ["Robotique", "Vision caméra", "Contrôle"],
         demoUrl: "assets/cv/CV_2026_fr.pdf",
         sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Sola Project - MPPT et circuit de puissance",
         description:
-          "Design et assemblage du PCB du circuit de puissance, notamment le maximum power point tracker pour un avion solaire au sein de Sola Project.",
+          "Travail d'électronique de puissance pour un avion solaire : design et assemblage du PCB du circuit de puissance, avec un focus sur le maximum power point tracker.",
         image: "assets/projects/project-2.svg",
-        tags: ["PCB", "Electronique", "Solaire"],
+        tags: ["Design PCB", "MPPT", "Électronique embarquée"],
         demoUrl: "assets/cv/CV_2026_fr.pdf",
         sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Copycat Portfolios",
         description:
-          "Projet de groupe EPFL d'analyse statistique de données financières, choix de stratégie d'investissement et création d'un site de démonstration.",
+          "Projet EPFL d'analyse statistique de données financières, de choix de stratégie d'investissement et d'étude de la performance des transactions politiques, livré avec un site de démonstration.",
         image: "assets/projects/project-3.svg",
-        tags: ["Data", "Statistiques", "Web"],
+        tags: ["Statistiques", "Analyse de données", "Site démo"],
         demoUrl: "assets/cv/CV_2026_fr.pdf",
         sourceUrl: "https://github.com/aiglegivree",
+      },
+    ],
+    skillsList: [
+      {
+        title: "Robotique et perception",
+        items: ["Robotique mobile", "Vision par ordinateur", "Image processing", "Drones FPV"],
+      },
+      {
+        title: "Électronique et embarqué",
+        items: ["Design PCB", "Raspberry Pi", "Arduino", "Capteurs", "Batteries", "Moteurs"],
+      },
+      {
+        title: "Data et IA",
+        items: ["Analyse de données", "Machine learning", "Deep learning", "PyTorch", "TensorFlow"],
+      },
+      {
+        title: "Programmation et outils",
+        items: ["Python", "C/C++", "OpenCV", "NumPy", "Pandas", "Git", "MATLAB", "Webots", "Catia", "KiCad", "LTspice"],
       },
     ],
     academics: [
@@ -340,19 +405,19 @@ const content = {
         date: "2025 - 2026",
         title: "Vainqueur du concours Robopoly",
         description:
-          "Robot autonome basé sur la vision par caméra pour suivi de ligne, suivi de couloir et tir sur cible.",
+          "Robot autonome uniquement basé sur la vision par caméra pour suivi de ligne, suivi de couloir et tir sur cible.",
       },
       {
         date: "2024 - actuel",
         title: "Électronique pour Sola Project",
         description:
-          "Responsable du PCB du circuit de puissance et du MPPT d'un projet d'avion solaire.",
+          "Design et assemblage du PCB du circuit de puissance et du MPPT pour un projet d'avion solaire.",
       },
       {
         date: "2023 - actuel",
         title: "Tutorat et assistanat",
         description:
-          "Tutorat en mathématiques, physique et électronique; assistanat pour des cours de systèmes électriques et de physique mécanique.",
+          "Tutorat en mathématiques, physique et électronique; assistanat EPFL en systèmes électriques et physique mécanique.",
       },
     ],
     education: [
@@ -383,19 +448,19 @@ const content = {
         date: "Septembre 2023 - actuel",
         title: "Tutorat et assistanat",
         description:
-          "Tuteur pour des élèves de l'école élémentaire au gymnase et à l'apprentissage. Assistant pour les cours EPFL de systèmes électriques et électroniques et de physique mécanique.",
+          "Tuteur pour des élèves de l'école élémentaire au gymnase et à l'apprentissage via Apprenons Ensemble. Assistant pour les cours EPFL de systèmes électriques et électroniques et de physique mécanique.",
       },
       {
         date: "Avril 2022",
         title: "Stage d'observation - Shark Robotics",
         description:
-          "Stage d'observation pour découvrir les activités de R&D et l'organisation d'une entreprise de robotique.",
+          "Stage d'observation pour découvrir les activités de R&D, l'environnement d'ingénierie et l'organisation d'une entreprise de robotique.",
       },
       {
         date: "Septembre 2020 - Juillet 2022",
         title: "Cours de programmation et de mathématiques",
         description:
-          "Introduction à la programmation, notamment Python, et aux applications des mathématiques dans le code pour des lycéens.",
+          "Introduction à la programmation, notamment Python, et aux applications concrètes des mathématiques dans le code pour des lycéens.",
       },
     ],
     cvProjects: [
@@ -409,7 +474,7 @@ const content = {
         date: "Mars 2024 - actuel",
         title: "Sola Project - MPPT et circuit de puissance",
         description:
-          "Responsable du design et de l'assemblage du PCB du circuit de puissance, notamment le maximum power point tracker d'un avion solaire.",
+          "Responsable du design et de l'assemblage du PCB du circuit de puissance, notamment le maximum power point tracker d'un avion solaire, au sein de l'association Sola Project.",
       },
       {
         date: "Septembre 2025 - Décembre 2025",
@@ -422,6 +487,23 @@ const content = {
         title: "Concours",
         description:
           "Participation au Concours Général de Mathématiques et vainqueur du concours de physique du Lions Club.",
+      },
+    ],
+    activities: [
+      {
+        date: "Septembre 2021 - actuel",
+        title: "Chef scout",
+        description: "Expérience de leadership et d'encadrement de jeunes comme chef scout.",
+      },
+      {
+        date: "2017 - actuel",
+        title: "Association des soirées lyriques de Sanxay",
+        description: "Membre de l'association participant à l'organisation d'événements lyriques à Sanxay.",
+      },
+      {
+        date: "Sports et musique",
+        title: "Centres d'intérêt",
+        description: "Handball, voile, trompette, guitare et judo avec ceinture marron.",
       },
     ],
   },
@@ -500,6 +582,24 @@ function renderProjects(language) {
     .join("");
 }
 
+function renderSkills(language) {
+  const grid = document.querySelector("#skillsGrid");
+  if (!grid) return;
+
+  grid.innerHTML = content[language].skillsList
+    .map(
+      (group) => `
+        <article class="skill-card">
+          <h3>${group.title}</h3>
+          <div class="tags">
+            ${group.items.map((item) => `<span class="tag">${item}</span>`).join("")}
+          </div>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function renderTimeline(selector, items) {
   const timeline = document.querySelector(selector);
   if (!timeline) return;
@@ -509,11 +609,13 @@ function renderTimeline(selector, items) {
 function renderPage(language) {
   setStaticText(language);
   renderProjects(language);
+  renderSkills(language);
   renderTimeline("#academicResults", content[language].academics);
   renderTimeline("#cvHighlights", content[language].highlights);
   renderTimeline("#educationList", content[language].education);
   renderTimeline("#experienceList", content[language].experience);
   renderTimeline("#cvProjectsList", content[language].cvProjects);
+  renderTimeline("#activitiesList", content[language].activities);
 }
 
 function bindLanguageSwitch() {
