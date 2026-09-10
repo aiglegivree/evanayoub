@@ -83,23 +83,21 @@ const content = {
           "Winner of the EPFL Robopoly robotics competition with an autonomous robot relying only on camera vision. The robot handled line tracking, corridor tracking, and target shooting autonomously.",
         image: "assets/projects/valobot/img2.jpg",
         gallery: [
+          "assets/projects/valobot/img2.jpg",
           "assets/projects/valobot/img3.jpg",
           "assets/projects/valobot/img4.jpg",
           "assets/projects/valobot/img5.jpg",
           "assets/projects/valobot/img1.jpg",
         ],
         tags: ["Valobot", "Robotics", "Camera Vision", "Control"],
-        demoUrl: "assets/cv/CV_2026_en.pdf",
-        sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Sola Project MPPT and Power Circuit",
         description:
           "Power electronics work for a solar aircraft: design and assembly of the power circuit PCB, with a focus on the maximum power point tracker.",
-        image: "assets/projects/project-2.svg",
+        image: "assets/projects/sola/IMG1.JPEG",
+        gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
         tags: ["PCB Design", "MPPT", "Embedded Electronics"],
-        demoUrl: "assets/cv/CV_2026_en.pdf",
-        sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Copycat Portfolios",
@@ -107,8 +105,6 @@ const content = {
           "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
         image: "assets/projects/project-3.svg",
         tags: ["Statistics", "Data Analysis", "Web Demo"],
-        demoUrl: "assets/cv/CV_2026_en.pdf",
-        sourceUrl: "https://github.com/aiglegivree",
       },
     ],
     skillsList: [
@@ -343,23 +339,21 @@ const content = {
           "Vainqueur du concours de robotique Robopoly à l'EPFL avec un robot autonome basé uniquement sur la vision par caméra. Le robot réalisait suivi de ligne, suivi de couloir et tir sur cible.",
         image: "assets/projects/valobot/img2.jpg",
         gallery: [
+          "assets/projects/valobot/img2.jpg",
           "assets/projects/valobot/img3.jpg",
           "assets/projects/valobot/img4.jpg",
           "assets/projects/valobot/img5.jpg",
           "assets/projects/valobot/img1.jpg",
         ],
         tags: ["Valobot", "Robotique", "Vision caméra", "Contrôle"],
-        demoUrl: "assets/cv/CV_2026_fr.pdf",
-        sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Sola Project - MPPT et circuit de puissance",
         description:
           "Travail d'électronique de puissance pour un avion solaire : design et assemblage du PCB du circuit de puissance, avec un focus sur le maximum power point tracker.",
-        image: "assets/projects/project-2.svg",
+        image: "assets/projects/sola/IMG1.JPEG",
+        gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
         tags: ["Design PCB", "MPPT", "Électronique embarquée"],
-        demoUrl: "assets/cv/CV_2026_fr.pdf",
-        sourceUrl: "https://github.com/aiglegivree",
       },
       {
         title: "Copycat Portfolios",
@@ -367,8 +361,6 @@ const content = {
           "Projet EPFL d'analyse statistique de données financières, de choix de stratégie d'investissement et d'étude de la performance des transactions politiques, livré avec un site de démonstration.",
         image: "assets/projects/project-3.svg",
         tags: ["Statistiques", "Analyse de données", "Site démo"],
-        demoUrl: "assets/cv/CV_2026_fr.pdf",
-        sourceUrl: "https://github.com/aiglegivree",
       },
     ],
     skillsList: [
@@ -569,38 +561,130 @@ function renderProjects(language) {
   const grid = document.querySelector("#projectsGrid");
   if (!grid) return;
 
-  const demoLabel = language === "fr" ? "CV" : "CV";
-  const codeLabel = language === "fr" ? "Code" : "Code";
-
   grid.innerHTML = content[language].projects
-    .map(
-      (project) => `
+    .map((project, projectIndex) => {
+      const images = project.gallery || [project.image];
+      return `
         <article class="project-card">
-          <img src="${project.image}" alt="${project.title}" />
+          <div class="project-mosaic" aria-label="${project.title} photos">
+            ${images
+              .map(
+                (image, imageIndex) => `
+                  <button
+                    class="project-photo ${imageIndex === 0 ? "feature" : ""}"
+                    type="button"
+                    data-project-index="${projectIndex}"
+                    data-image-index="${imageIndex}"
+                    aria-label="${project.title} photo ${imageIndex + 1}"
+                  >
+                    <img src="${image}" alt="${project.title} photo ${imageIndex + 1}" />
+                  </button>
+                `
+              )
+              .join("")}
+          </div>
           <div class="project-body">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            ${
-              project.gallery
-                ? `<div class="project-gallery" aria-label="${project.title} gallery">
-                    ${project.gallery
-                      .map((image, index) => `<img src="${image}" alt="${project.title} photo ${index + 1}" />`)
-                      .join("")}
-                  </div>`
-                : ""
-            }
             <div class="tags" aria-label="Technologies used">
               ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
             </div>
-            <div class="project-links">
-              <a href="${project.demoUrl}" target="_blank" rel="noreferrer">${demoLabel}</a>
-              <a href="${project.sourceUrl}" target="_blank" rel="noreferrer">${codeLabel}</a>
-            </div>
           </div>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
+
+  bindProjectLightbox(language);
+}
+
+function projectImages(project) {
+  return project.gallery || [project.image];
+}
+
+function ensureLightbox() {
+  let lightbox = document.querySelector("#imageLightbox");
+  if (lightbox) return lightbox;
+
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `
+      <div class="image-lightbox" id="imageLightbox" hidden>
+        <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+        <button class="lightbox-nav previous" type="button" aria-label="Previous image">‹</button>
+        <figure>
+          <img src="" alt="" />
+          <figcaption></figcaption>
+        </figure>
+        <button class="lightbox-nav next" type="button" aria-label="Next image">›</button>
+      </div>
+    `
+  );
+
+  lightbox = document.querySelector("#imageLightbox");
+  lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  lightbox.querySelector(".previous").addEventListener("click", () => stepLightbox(-1));
+  lightbox.querySelector(".next").addEventListener("click", () => stepLightbox(1));
+  document.addEventListener("keydown", handleLightboxKeys);
+  return lightbox;
+}
+
+const lightboxState = {
+  language: DEFAULT_LANGUAGE,
+  projectIndex: 0,
+  imageIndex: 0,
+};
+
+function bindProjectLightbox(language) {
+  document.querySelectorAll("[data-project-index]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openLightbox(language, Number(button.dataset.projectIndex), Number(button.dataset.imageIndex));
+    });
+  });
+}
+
+function openLightbox(language, projectIndex, imageIndex) {
+  lightboxState.language = language;
+  lightboxState.projectIndex = projectIndex;
+  lightboxState.imageIndex = imageIndex;
+  ensureLightbox().hidden = false;
+  document.body.classList.add("lightbox-open");
+  updateLightbox();
+}
+
+function closeLightbox() {
+  const lightbox = document.querySelector("#imageLightbox");
+  if (!lightbox || lightbox.hidden) return;
+  lightbox.hidden = true;
+  document.body.classList.remove("lightbox-open");
+}
+
+function stepLightbox(direction) {
+  const project = content[lightboxState.language].projects[lightboxState.projectIndex];
+  const images = projectImages(project);
+  lightboxState.imageIndex = (lightboxState.imageIndex + direction + images.length) % images.length;
+  updateLightbox();
+}
+
+function updateLightbox() {
+  const project = content[lightboxState.language].projects[lightboxState.projectIndex];
+  const images = projectImages(project);
+  const lightbox = ensureLightbox();
+  const image = lightbox.querySelector("img");
+  image.src = images[lightboxState.imageIndex];
+  image.alt = `${project.title} photo ${lightboxState.imageIndex + 1}`;
+  lightbox.querySelector("figcaption").textContent = `${project.title} · ${lightboxState.imageIndex + 1}/${images.length}`;
+}
+
+function handleLightboxKeys(event) {
+  const lightbox = document.querySelector("#imageLightbox");
+  if (!lightbox || lightbox.hidden) return;
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowLeft") stepLightbox(-1);
+  if (event.key === "ArrowRight") stepLightbox(1);
 }
 
 function renderSkills(language) {
