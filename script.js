@@ -89,7 +89,7 @@ const content = {
           "assets/projects/valobot/img5.jpg",
           "assets/projects/valobot/img1.jpg",
         ],
-        tags: ["Valobot", "Robotics", "Camera Vision", "Control"],
+        tags: ["Computer Vision", "Electronics", "Motor Control", "CAD", "Mechanics", "Python"],
       },
       {
         title: "Sola Project MPPT and Power Circuit",
@@ -111,7 +111,7 @@ const content = {
           "assets/projects/copycat/img2.png",
           "assets/projects/copycat/img3.png",
         ],
-        tags: ["Statistics", "Data Analysis", "Web Demo"],
+        tags: ["Data Analysis", "Python", "Web Demo", "Finance", "Statistics & Probability"],
       },
     ],
     skillsList: [
@@ -352,7 +352,7 @@ const content = {
           "assets/projects/valobot/img5.jpg",
           "assets/projects/valobot/img1.jpg",
         ],
-        tags: ["Valobot", "Robotique", "Vision caméra", "Contrôle"],
+        tags: ["Vision par ordinateur", "Électronique", "Contrôle moteur", "CAO", "Mécanique", "Python"],
       },
       {
         title: "Sola Project - MPPT et circuit de puissance",
@@ -374,7 +374,7 @@ const content = {
           "assets/projects/copycat/img2.png",
           "assets/projects/copycat/img3.png",
         ],
-        tags: ["Statistiques", "Analyse de données", "Site démo"],
+        tags: ["Analyse de données", "Python", "Site démo", "Finance", "Statistiques & probabilités"],
       },
     ],
     skillsList: [
