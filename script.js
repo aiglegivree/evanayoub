@@ -100,6 +100,25 @@ const content = {
         tags: ["PCB Design", "MPPT", "Embedded Electronics"],
       },
       {
+        title: "Thymio Mobile Robot Navigation",
+        description:
+          "Mobile robotics class project graded 6/6, where a Thymio robot navigates from start to goal using A* path planning, ArUco-based computer vision localization, EKF sensor fusion, ToF obstacle avoidance, kidnapping recovery, and automatic replanning.",
+        image: "assets/thymio/video1-poster.jpg",
+        gallery: [
+          {
+            type: "video",
+            src: "assets/thymio/video1.MP4",
+            poster: "assets/thymio/video1-poster.jpg",
+          },
+          {
+            type: "video",
+            src: "assets/thymio/video2.MP4",
+            poster: "assets/thymio/video2-poster.jpg",
+          },
+        ],
+        tags: ["Mobile Robotics", "A*", "Computer Vision", "EKF", "ArUco", "Obstacle Avoidance", "Python"],
+      },
+      {
         title: "Copycat Portfolios",
         description:
           "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
@@ -363,6 +382,25 @@ const content = {
         tags: ["Design PCB", "MPPT", "Électronique embarquée"],
       },
       {
+        title: "Navigation mobile avec Thymio",
+        description:
+          "Projet de robotique mobile noté 6/6, où un robot Thymio navigue d'un départ à une destination avec planification A*, localisation par vision avec ArUco, fusion EKF, évitement local par capteurs ToF, relocalisation après kidnapping et replannification automatique.",
+        image: "assets/thymio/video1-poster.jpg",
+        gallery: [
+          {
+            type: "video",
+            src: "assets/thymio/video1.MP4",
+            poster: "assets/thymio/video1-poster.jpg",
+          },
+          {
+            type: "video",
+            src: "assets/thymio/video2.MP4",
+            poster: "assets/thymio/video2-poster.jpg",
+          },
+        ],
+        tags: ["Robotique mobile", "A*", "Vision par ordinateur", "EKF", "ArUco", "Évitement d'obstacles", "Python"],
+      },
+      {
         title: "Copycat Portfolios",
         description:
           "Projet EPFL d'analyse statistique de données financières, de choix de stratégie d'investissement et d'étude de la performance des transactions politiques, livré avec un site de démonstration.",
@@ -577,22 +615,17 @@ function renderProjects(language) {
 
   grid.innerHTML = content[language].projects
     .map((project, projectIndex) => {
-      const images = project.gallery || [project.image];
+      const media = projectMedia(project);
       return `
         <article class="project-card">
           <div class="project-carousel" data-carousel-project="${projectIndex}" aria-label="${project.title} photos">
             <button class="carousel-nav previous" type="button" data-carousel-step="-1" aria-label="Previous ${project.title} photo">‹</button>
-            <button
-              class="carousel-image"
-              type="button"
-              data-project-index="${projectIndex}"
-              data-image-index="0"
-              aria-label="Open ${project.title} photo 1"
-            >
-              <img src="${images[0]}" alt="${project.title} photo 1" />
-            </button>
+            <div class="carousel-stage" data-image-index="0">
+              ${mediaMarkup(media[0], project.title, 0)}
+            </div>
+            <button class="carousel-open" type="button" aria-label="Open ${project.title} media 1">Open larger</button>
             <button class="carousel-nav next" type="button" data-carousel-step="1" aria-label="Next ${project.title} photo">›</button>
-            <div class="carousel-count" aria-live="polite">1/${images.length}</div>
+            <div class="carousel-count" aria-live="polite">1/${media.length}</div>
           </div>
           <div class="project-body">
             <h3>${project.title}</h3>
@@ -616,8 +649,27 @@ function renderProjects(language) {
   bindProjectCarousels(language);
 }
 
-function projectImages(project) {
-  return project.gallery || [project.image];
+function projectMedia(project) {
+  return (project.gallery || [project.image]).map(normalizeMedia);
+}
+
+function normalizeMedia(item) {
+  if (typeof item === "string") {
+    return {
+      type: item.toLowerCase().endsWith(".mp4") ? "video" : "image",
+      src: item,
+    };
+  }
+
+  return item;
+}
+
+function mediaMarkup(media, title, index) {
+  if (media.type === "video") {
+    return `<video src="${media.src}" ${media.poster ? `poster="${media.poster}"` : ""} controls preload="metadata" playsinline aria-label="${title} video ${index + 1}"></video>`;
+  }
+
+  return `<img src="${media.src}" alt="${title} photo ${index + 1}" />`;
 }
 
 function ensureLightbox() {
@@ -631,7 +683,7 @@ function ensureLightbox() {
         <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
         <button class="lightbox-nav previous" type="button" aria-label="Previous image">‹</button>
         <figure>
-          <img src="" alt="" />
+          <div class="lightbox-media"></div>
           <figcaption></figcaption>
         </figure>
         <button class="lightbox-nav next" type="button" aria-label="Next image">›</button>
@@ -660,26 +712,25 @@ function bindProjectCarousels(language) {
   document.querySelectorAll("[data-carousel-project]").forEach((carousel) => {
     const projectIndex = Number(carousel.dataset.carouselProject);
     const project = content[language].projects[projectIndex];
-    const images = projectImages(project);
-    const imageButton = carousel.querySelector(".carousel-image");
-    const image = imageButton.querySelector("img");
+    const media = projectMedia(project);
+    const stage = carousel.querySelector(".carousel-stage");
+    const openButton = carousel.querySelector(".carousel-open");
     const count = carousel.querySelector(".carousel-count");
 
     carousel.querySelectorAll("[data-carousel-step]").forEach((button) => {
-      button.hidden = images.length < 2;
+      button.hidden = media.length < 2;
       button.addEventListener("click", () => {
-        const nextIndex = (Number(imageButton.dataset.imageIndex) + Number(button.dataset.carouselStep) + images.length) % images.length;
-        imageButton.dataset.imageIndex = String(nextIndex);
-        imageButton.setAttribute("aria-label", `Open ${project.title} photo ${nextIndex + 1}`);
-        image.src = images[nextIndex];
-        image.alt = `${project.title} photo ${nextIndex + 1}`;
-        count.textContent = `${nextIndex + 1}/${images.length}`;
+        const nextIndex = (Number(stage.dataset.imageIndex) + Number(button.dataset.carouselStep) + media.length) % media.length;
+        stage.dataset.imageIndex = String(nextIndex);
+        stage.innerHTML = mediaMarkup(media[nextIndex], project.title, nextIndex);
+        openButton.setAttribute("aria-label", `Open ${project.title} media ${nextIndex + 1}`);
+        count.textContent = `${nextIndex + 1}/${media.length}`;
       });
     });
 
-    count.hidden = images.length < 2;
-    imageButton.addEventListener("click", () => {
-      openLightbox(language, projectIndex, Number(imageButton.dataset.imageIndex));
+    count.hidden = media.length < 2;
+    openButton.addEventListener("click", () => {
+      openLightbox(language, projectIndex, Number(stage.dataset.imageIndex));
     });
   });
 }
@@ -702,19 +753,17 @@ function closeLightbox() {
 
 function stepLightbox(direction) {
   const project = content[lightboxState.language].projects[lightboxState.projectIndex];
-  const images = projectImages(project);
-  lightboxState.imageIndex = (lightboxState.imageIndex + direction + images.length) % images.length;
+  const media = projectMedia(project);
+  lightboxState.imageIndex = (lightboxState.imageIndex + direction + media.length) % media.length;
   updateLightbox();
 }
 
 function updateLightbox() {
   const project = content[lightboxState.language].projects[lightboxState.projectIndex];
-  const images = projectImages(project);
+  const media = projectMedia(project);
   const lightbox = ensureLightbox();
-  const image = lightbox.querySelector("img");
-  image.src = images[lightboxState.imageIndex];
-  image.alt = `${project.title} photo ${lightboxState.imageIndex + 1}`;
-  lightbox.querySelector("figcaption").textContent = `${project.title} · ${lightboxState.imageIndex + 1}/${images.length}`;
+  lightbox.querySelector(".lightbox-media").innerHTML = mediaMarkup(media[lightboxState.imageIndex], project.title, lightboxState.imageIndex);
+  lightbox.querySelector("figcaption").textContent = `${project.title} · ${lightboxState.imageIndex + 1}/${media.length}`;
 }
 
 function handleLightboxKeys(event) {
