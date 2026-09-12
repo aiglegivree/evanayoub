@@ -4,9 +4,9 @@ const content = {
       skills: "Skills",
       academics: "Academic Results",
       cv: "CV",
+      documents: "Documents",
       contact: "Contact",
     },
-    footer: "Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.",
     documents: {
       cvEn: "CV PDF English",
       cvFr: "CV PDF Francais",

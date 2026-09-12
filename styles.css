@@ -214,6 +214,10 @@ h3 {
   text-align: center;
 }
 
+.documents {
+  text-align: center;
+}
+
 .section-heading {
   max-width: 54rem;
   margin: 0 auto 2rem;
@@ -545,19 +549,6 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   font-weight: 800;
-}
-
-footer {
-  width: min(100%, 1180px);
-  margin-inline: auto;
-  padding: 2rem clamp(1rem, 4vw, 4rem);
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
 }
 
 .cv-page {
