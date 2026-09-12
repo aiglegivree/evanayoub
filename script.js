@@ -8,7 +8,8 @@ const content = {
     },
     footer: "Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.",
     documents: {
-      cvEn: "CV PDF EN",
+      cvEn: "CV PDF English",
+      cvFr: "CV PDF Francais",
     },
     home: {
       hero: {
@@ -36,7 +37,7 @@ const content = {
       academics: {
         label: "Academic Results",
         title: "Education and results",
-        transcript: "Open academic record",
+        transcript: "Academic record",
       },
       cv: {
         label: "CV",
@@ -326,6 +327,10 @@ function setStaticText() {
 
   document.querySelectorAll("[data-doc='cv-en']").forEach((node) => {
     node.textContent = content.documents.cvEn;
+  });
+
+  document.querySelectorAll("[data-doc='cv-fr']").forEach((node) => {
+    node.textContent = content.documents.cvFr;
   });
 }
 
