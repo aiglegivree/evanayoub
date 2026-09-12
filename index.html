@@ -18,11 +18,12 @@
       </a>
       <div class="header-actions">
         <nav aria-label="Main navigation">
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
           <a href="#education" data-i18n="cv.education.title">Education</a>
-          <a href="#experience" data-i18n="cv.experience.title">Experience</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#experience" data-i18n="cv.experience.title">Experience</a>
           <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#activities" data-i18n="cv.activities.title">Activities</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="language-switch" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -49,6 +50,52 @@
         </div>
       </section>
 
+      <section class="section" id="education">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.academics.label">Academic Results</p>
+          <h2 data-i18n="cv.education.title">Education</h2>
+        </div>
+        <div class="timeline compact-education" id="educationList"></div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.projects.label">Selected Work</p>
+          <h2 data-i18n="cv.projects.title">Projects and awards</h2>
+        </div>
+        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.cv.label">CV</p>
+          <h2 data-i18n="cv.experience.title">Experience</h2>
+        </div>
+        <div class="timeline" id="experienceList"></div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.skills.label">Technical Profile</p>
+          <h2 data-i18n="cv.skills.title">Skills</h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+        <div class="timeline compact-timeline">
+          <article class="timeline-item">
+            <h3 data-i18n="cv.languages.title">Languages</h3>
+            <p data-i18n="cv.languages.items">French and Lebanese: native. English: C2. Spanish: B2.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="activities">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="cv.activities.title">Activities</p>
+          <h2 data-i18n="cv.activities.title">Activities</h2>
+        </div>
+        <div class="timeline" id="activitiesList"></div>
+      </section>
+
       <section class="section contact" id="contact">
         <div>
           <p class="section-label" data-i18n="home.contact.label">Contact</p>
@@ -72,52 +119,6 @@
             </a>
           </div>
         </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.academics.label">Academic Results</p>
-          <h2 data-i18n="cv.education.title">Education</h2>
-        </div>
-        <div class="timeline" id="educationList"></div>
-      </section>
-
-      <section class="section" id="experience">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.cv.label">CV</p>
-          <h2 data-i18n="cv.experience.title">Experience</h2>
-        </div>
-        <div class="timeline" id="experienceList"></div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.projects.label">Selected Work</p>
-          <h2 data-i18n="cv.projects.title">Projects and awards</h2>
-        </div>
-        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.skills.label">Technical Profile</p>
-          <h2 data-i18n="cv.skills.title">Skills</h2>
-        </div>
-        <div class="skills-grid" id="skillsGrid"></div>
-        <div class="timeline compact-timeline">
-          <article class="timeline-item">
-            <h3 data-i18n="cv.languages.title">Languages</h3>
-            <p data-i18n="cv.languages.items">French and Lebanese: native. English: C2. Spanish: B2.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="activities">
-        <div>
-          <p class="section-label" data-i18n="cv.activities.title">Activities</p>
-          <h2 data-i18n="cv.activities.title">Activities</h2>
-        </div>
-        <div class="timeline" id="activitiesList"></div>
       </section>
     </main>
 
