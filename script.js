@@ -87,7 +87,7 @@ const content = {
           "assets/projects/valobot/img3.jpg",
           "assets/projects/valobot/img4.jpg",
         ],
-        tags: ["Computer Vision", "Electronics", "Motor Control", "CAD", "Mechanics", "Python"],
+        tags: ["Computer Vision", "Electronics", "Motor Control", "CAD", "Mechanics", "Python", "Team Work"],
       },
       {
         title: "Sola Project MPPT and Power Circuit",
@@ -95,7 +95,7 @@ const content = {
           "Power electronics work for a solar aircraft: design and assembly of the power circuit PCB, with a focus on the maximum power point tracker.",
         image: "assets/projects/sola/IMG1.JPEG",
         gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
-        tags: ["PCB Design", "MPPT", "Embedded Electronics"],
+        tags: ["PCB Design", "MPPT", "Embedded Electronics", "Team Work"],
       },
       {
         title: "Aerial Robotics Gate Navigation",
@@ -112,7 +112,7 @@ const content = {
             src: "assets/projects/aerial/video2.MOV",
           },
         ],
-        tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Project"],
+        tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Work"],
       },
       {
         title: "Image Analysis and Pattern Recognition",
@@ -127,7 +127,7 @@ const content = {
           "assets/projects/image-analysis/img3.png",
           "assets/projects/image-analysis/img4.png",
         ],
-        tags: ["Image Analysis", "Pattern Recognition", "Computer Vision", "Card Detection", "Classification", "Python"],
+        tags: ["Image Analysis", "Pattern Recognition", "Computer Vision", "Feature Extraction", "Classification", "CNN", "Deep Learning", "Segmentation", "Data Augmentation", "Team Work"],
       },
       {
         title: "Thymio Mobile Robot Navigation",
@@ -146,7 +146,7 @@ const content = {
             poster: "assets/thymio/video2-poster.jpg",
           },
         ],
-        tags: ["Mobile Robotics", "A*", "Computer Vision", "EKF", "ArUco", "Obstacle Avoidance", "Python"],
+        tags: ["Mobile Robotics", "A*", "Computer Vision", "EKF", "ArUco", "Obstacle Avoidance", "Python", "Team Work"],
       },
       {
         title: "Copycat Portfolios",
@@ -160,7 +160,7 @@ const content = {
           "assets/projects/copycat/img2.png",
           "assets/projects/copycat/img3.png",
         ],
-        tags: ["Data Analysis", "Python", "Web Demo", "Finance", "Statistics & Probability"],
+        tags: ["Data Analysis", "Python", "Web Demo", "Finance", "Statistics & Probability", "Team Work"],
       },
     ],
     skillsList: [
@@ -399,7 +399,7 @@ const content = {
           "assets/projects/valobot/img3.jpg",
           "assets/projects/valobot/img4.jpg",
         ],
-        tags: ["Vision par ordinateur", "Électronique", "Contrôle moteur", "CAO", "Mécanique", "Python"],
+        tags: ["Vision par ordinateur", "Électronique", "Contrôle moteur", "CAO", "Mécanique", "Python", "Travail d'equipe"],
       },
       {
         title: "Sola Project - MPPT et circuit de puissance",
@@ -407,7 +407,7 @@ const content = {
           "Travail d'électronique de puissance pour un avion solaire : design et assemblage du PCB du circuit de puissance, avec un focus sur le maximum power point tracker.",
         image: "assets/projects/sola/IMG1.JPEG",
         gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
-        tags: ["Design PCB", "MPPT", "Électronique embarquée"],
+        tags: ["Design PCB", "MPPT", "Électronique embarquée", "Travail d'equipe"],
       },
       {
         title: "Robotique aerienne - navigation entre portes",
@@ -424,7 +424,7 @@ const content = {
             src: "assets/projects/aerial/video2.MOV",
           },
         ],
-        tags: ["Robotique aerienne", "Controle de drone", "Vision par ordinateur", "Webots", "Navigation autonome", "Projet en equipe"],
+        tags: ["Robotique aerienne", "Controle de drone", "Vision par ordinateur", "Webots", "Navigation autonome", "Travail d'equipe"],
       },
       {
         title: "Analyse d'image et reconnaissance de formes",
@@ -439,7 +439,7 @@ const content = {
           "assets/projects/image-analysis/img3.png",
           "assets/projects/image-analysis/img4.png",
         ],
-        tags: ["Analyse d'image", "Reconnaissance de formes", "Vision par ordinateur", "Detection de cartes", "Classification", "Python"],
+        tags: ["Analyse d'image", "Reconnaissance de formes", "Vision par ordinateur", "Extraction de caracteristiques", "Classification", "CNN", "Deep Learning", "Segmentation", "Data augmentation", "Travail d'equipe"],
       },
       {
         title: "Navigation mobile avec Thymio",
@@ -458,7 +458,7 @@ const content = {
             poster: "assets/thymio/video2-poster.jpg",
           },
         ],
-        tags: ["Robotique mobile", "A*", "Vision par ordinateur", "EKF", "ArUco", "Évitement d'obstacles", "Python"],
+        tags: ["Robotique mobile", "A*", "Vision par ordinateur", "EKF", "ArUco", "Évitement d'obstacles", "Python", "Travail d'equipe"],
       },
       {
         title: "Copycat Portfolios",
@@ -472,7 +472,7 @@ const content = {
           "assets/projects/copycat/img2.png",
           "assets/projects/copycat/img3.png",
         ],
-        tags: ["Analyse de données", "Python", "Site démo", "Finance", "Statistiques & probabilités"],
+        tags: ["Analyse de données", "Python", "Site démo", "Finance", "Statistiques & probabilités", "Travail d'equipe"],
       },
     ],
     skillsList: [
