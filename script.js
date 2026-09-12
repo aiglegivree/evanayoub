@@ -1,5 +1,4 @@
 const content = {
-  en: {
     nav: {
       projects: "Projects",
       skills: "Skills",
@@ -10,7 +9,6 @@ const content = {
     footer: "Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.",
     documents: {
       cvEn: "CV PDF EN",
-      cvFr: "CV PDF FR",
     },
     home: {
       hero: {
@@ -109,7 +107,7 @@ const content = {
           },
           {
             type: "video",
-            src: "assets/projects/aerial/video2.MOV",
+            src: "assets/projects/aerial/video2.mp4",
           },
         ],
         tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Work"],
@@ -310,352 +308,24 @@ const content = {
         description: "Handball, sailing, trumpet, guitar, and judo with a brown belt.",
       },
     ],
-  },
-  fr: {
-    nav: {
-      projects: "Projets",
-      skills: "Compétences",
-      academics: "Résultats académiques",
-      cv: "CV",
-      contact: "Contact",
-    },
-    footer: "Construit avec HTML, CSS et JavaScript. Hébergé sur GitHub Pages.",
-    documents: {
-      cvEn: "CV PDF EN",
-      cvFr: "CV PDF FR",
-    },
-    home: {
-      hero: {
-        eyebrow: "Étudiant ingénieur en dernière année de robotique",
-        title: "Evan Ayoub",
-        text:
-          "Étudiant en robotique à l'EPFL avec une mineure en Data Science, intéressé par l'électronique, le code, la vision par ordinateur, la CAO et la mécanique.",
-        primary: "Voir les projets",
-        secondary: "Ouvrir le CV",
-      },
-      about: {
-        label: "À propos",
-        title: "Bonjour, je suis Evan.",
-        text:
-          "Je suis étudiant ingénieur en dernière année de robotique, avec une mineure en Data Science. J'aime toute la chaîne de la robotique : électronique, code, vision, CAO, mécanique, et les choix d'ingénierie qui font fonctionner un système réel.",
-      },
-      projects: {
-        label: "Sélection",
-        title: "Projets",
-      },
-      skills: {
-        label: "Profil technique",
-        title: "Compétences",
-      },
-      academics: {
-        label: "Résultats académiques",
-        title: "Formation et résultats",
-        transcript: "Ouvrir le relevé de notes",
-      },
-      cv: {
-        label: "CV",
-        title: "Expérience et compétences",
-        text:
-          "Projets de robotique, tutorat et assistanat, électronique embarquée, analyse de données et outils techniques.",
-        link: "Ouvrir la page CV",
-      },
-      contact: {
-        label: "Contact",
-        title: "Construisons quelque chose d'utile.",
-      },
-    },
-    cv: {
-      label: "Curriculum Vitae",
-      summary:
-        "Étudiant ingénieur en dernière année de robotique à l'EPFL, avec une mineure en Data Science et un Bachelor en Microtechnique. Intéressé par l'électronique, le code, la vision par ordinateur, la CAO, la mécanique, la robotique autonome et l'IA appliquée.",
-      transcript: "Relevé de notes",
-      contact: { title: "Contact" },
-      skills: {
-        title: "Compétences",
-        technical:
-          "Robotique mobile, vision par ordinateur, image processing, systèmes embarqués, design PCB.",
-        programming:
-          "Python, C/C++, OpenCV, NumPy, Pandas, Git, PyTorch, TensorFlow.",
-        tools:
-          "MATLAB, Webots, Catia, KiCad, LTspice, Codex, Raspberry Pi, Arduino.",
-      },
-      languages: {
-        title: "Langues",
-        items: "Français et libanais : langues maternelles. Anglais : C2. Espagnol : B2.",
-      },
-      education: { title: "Formation" },
-      experience: { title: "Expérience" },
-      projects: { title: "Projets" },
-      activities: { title: "Activités" },
-    },
-    projects: [
-      {
-        title: "Valobot - Concours de robotique Robopoly",
-        description:
-          "Vainqueur du concours de robotique Robopoly à l'EPFL avec un robot autonome basé uniquement sur la vision par caméra. Le robot réalisait suivi de ligne, suivi de couloir et tir sur cible.",
-        image: "assets/projects/valobot/img2.jpg",
-        gallery: [
-          "assets/projects/valobot/img2.jpg",
-          "assets/projects/valobot/img3.jpg",
-          "assets/projects/valobot/img4.jpg",
-        ],
-        tags: ["Vision par ordinateur", "Électronique", "Contrôle moteur", "CAO", "Mécanique", "Python", "Travail d'equipe"],
-      },
-      {
-        title: "Sola Project - MPPT et circuit de puissance",
-        description:
-          "Travail d'électronique de puissance pour un avion solaire : design et assemblage du PCB du circuit de puissance, avec un focus sur le maximum power point tracker.",
-        image: "assets/projects/sola/IMG1.JPEG",
-        gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
-        tags: ["Design PCB", "MPPT", "Électronique embarquée", "Travail d'equipe"],
-      },
-      {
-        title: "Robotique aerienne - navigation entre portes",
-        description:
-          "Projet de cours en robotique aerienne note 5.25/6, centre sur la navigation autonome rapide entre des portes. J'ai d'abord developpe un controleur en simulation Webots pour detecter les portes et les traverser le plus vite possible, puis nous avons adapte l'approche en equipe sur un drone reel avec des portes physiques.",
-        image: "assets/projects/aerial/video1.mp4",
-        gallery: [
-          {
-            type: "video",
-            src: "assets/projects/aerial/video1.mp4",
-          },
-          {
-            type: "video",
-            src: "assets/projects/aerial/video2.MOV",
-          },
-        ],
-        tags: ["Robotique aerienne", "Controle de drone", "Vision par ordinateur", "Webots", "Navigation autonome", "Travail d'equipe"],
-      },
-      {
-        title: "Analyse d'image et reconnaissance de formes",
-        description:
-          "Projet de cours note 5.75/6 en analyse d'image et reconnaissance de formes. L'objectif etait de detecter des cartes UNO sur une table, de classifier chaque carte, puis d'attribuer les cartes detectees au bon joueur.",
-        websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
-        websiteLabel: "Ouvrir la presentation",
-        image: "assets/projects/image-analysis/img1.png",
-        gallery: [
-          "assets/projects/image-analysis/img1.png",
-          "assets/projects/image-analysis/img2.png",
-          "assets/projects/image-analysis/img3.png",
-          "assets/projects/image-analysis/img4.png",
-        ],
-        tags: ["Analyse d'image", "Reconnaissance de formes", "Vision par ordinateur", "Extraction de caracteristiques", "Classification", "CNN", "Deep Learning", "Segmentation", "Data augmentation", "Travail d'equipe"],
-      },
-      {
-        title: "Navigation mobile avec Thymio",
-        description:
-          "Projet de robotique mobile noté 6/6, où un robot Thymio navigue d'un départ à une destination avec planification A*, localisation par vision avec ArUco, fusion EKF, évitement local par capteurs ToF, relocalisation après kidnapping et replannification automatique.",
-        image: "assets/thymio/video1-poster.jpg",
-        gallery: [
-          {
-            type: "video",
-            src: "assets/thymio/video1.MP4",
-            poster: "assets/thymio/video1-poster.jpg",
-          },
-          {
-            type: "video",
-            src: "assets/thymio/video2.MP4",
-            poster: "assets/thymio/video2-poster.jpg",
-          },
-        ],
-        tags: ["Robotique mobile", "A*", "Vision par ordinateur", "EKF", "ArUco", "Évitement d'obstacles", "Python", "Travail d'equipe"],
-      },
-      {
-        title: "Copycat Portfolios",
-        description:
-          "Projet EPFL d'analyse statistique de données financières, de choix de stratégie d'investissement et d'étude de la performance des transactions politiques, livré avec un site de démonstration.",
-        websiteUrl: "https://ada-2025-project-adaptateurusbversu.vercel.app/",
-        websiteLabel: "Ouvrir le site du projet",
-        image: "assets/projects/copycat/img1.png",
-        gallery: [
-          "assets/projects/copycat/img1.png",
-          "assets/projects/copycat/img2.png",
-          "assets/projects/copycat/img3.png",
-        ],
-        tags: ["Analyse de données", "Python", "Site démo", "Finance", "Statistiques & probabilités", "Travail d'equipe"],
-      },
-    ],
-    skillsList: [
-      {
-        title: "Robotique et perception",
-        items: ["Robotique mobile", "Vision par ordinateur", "Image processing", "Drones FPV"],
-      },
-      {
-        title: "Électronique et embarqué",
-        items: ["Design PCB", "Raspberry Pi", "Arduino", "Capteurs", "Batteries", "Moteurs"],
-      },
-      {
-        title: "Data et IA",
-        items: ["Analyse de données", "Machine learning", "Deep learning", "PyTorch", "TensorFlow"],
-      },
-      {
-        title: "Programmation et outils",
-        items: ["Python", "C/C++", "OpenCV", "NumPy", "Pandas", "Git", "MATLAB", "Webots", "Catia", "KiCad", "LTspice"],
-      },
-    ],
-    academics: [
-      {
-        date: "2025 - actuel",
-        title: "EPFL - Master of Science in Robotics",
-        description: "Mineure en Data Science.",
-      },
-      {
-        date: "2022 - 2025",
-        title: "EPFL - Bachelor en Microtechnique",
-        description: "Résultat final : 5.00/6.",
-      },
-      {
-        date: "2023 - 2024",
-        title: "Aalto University - Année d'échange",
-        description: "Année d'échange à Helsinki, Finlande.",
-      },
-      {
-        date: "2019 - 2022",
-        title: "Lycee Fenelon Notre Dame, La Rochelle",
-        description:
-          "Baccalauréat spécialités mathématiques, physique-chimie, numérique et sciences informatiques. Section européenne, mention Très Bien, moyenne : 17.03/20.",
-      },
-    ],
-    highlights: [
-      {
-        date: "2025 - 2026",
-        title: "Vainqueur du concours Robopoly",
-        description:
-          "Robot autonome uniquement basé sur la vision par caméra pour suivi de ligne, suivi de couloir et tir sur cible.",
-      },
-      {
-        date: "2024 - actuel",
-        title: "Électronique pour Sola Project",
-        description:
-          "Design et assemblage du PCB du circuit de puissance et du MPPT pour un projet d'avion solaire.",
-      },
-      {
-        date: "2023 - actuel",
-        title: "Tutorat et assistanat",
-        description:
-          "Tutorat en mathématiques, physique et électronique; assistanat EPFL en systèmes électriques et physique mécanique.",
-      },
-    ],
-    education: [
-      {
-        date: "Septembre 2025 - actuel",
-        title: "Master of Science in Robotics - EPFL",
-        description: "Mineure en Data Science.",
-      },
-      {
-        date: "Août 2023 - Juillet 2024",
-        title: "Année d'échange - Aalto University",
-        description: "Échange académique à Helsinki, Finlande.",
-      },
-      {
-        date: "Septembre 2022 - Juillet 2025",
-        title: "Bachelor en Microtechnique - EPFL",
-        description: "Résultat final : 5.00/6.",
-      },
-      {
-        date: "Septembre 2019 - Juillet 2022",
-        title: "Baccalauréat - Lycée Fénelon Notre Dame",
-        description:
-          "Spécialités mathématiques, physique-chimie, numérique et sciences informatiques. Section européenne, mention Très Bien, moyenne : 17.03/20.",
-      },
-    ],
-    experience: [
-      {
-        date: "Septembre 2023 - actuel",
-        title: "Tutorat et assistanat",
-        description:
-          "Tuteur pour des élèves de l'école élémentaire au gymnase et à l'apprentissage via Apprenons Ensemble. Assistant pour les cours EPFL de systèmes électriques et électroniques et de physique mécanique.",
-      },
-      {
-        date: "Avril 2022",
-        title: "Stage d'observation - Shark Robotics",
-        description:
-          "Stage d'observation pour découvrir les activités de R&D, l'environnement d'ingénierie et l'organisation d'une entreprise de robotique.",
-      },
-      {
-        date: "Septembre 2020 - Juillet 2022",
-        title: "Cours de programmation et de mathématiques",
-        description:
-          "Introduction à la programmation, notamment Python, et aux applications concrètes des mathématiques dans le code pour des lycéens.",
-      },
-    ],
-    cvProjects: [
-      {
-        date: "Octobre 2025 - Juin 2026",
-        title: "Concours de robotique Robopoly - EPFL",
-        description:
-          "Vainqueur du concours avec un robot autonome basé sur la vision par caméra pour suivi de ligne, suivi de couloir et tir sur cible.",
-      },
-      {
-        date: "Mars 2024 - actuel",
-        title: "Sola Project - MPPT et circuit de puissance",
-        description:
-          "Responsable du design et de l'assemblage du PCB du circuit de puissance, notamment le maximum power point tracker d'un avion solaire, au sein de l'association Sola Project.",
-      },
-      {
-        date: "Septembre 2025 - Décembre 2025",
-        title: "Copycat Portfolios - EPFL",
-        description:
-          "Analyse de données financières, choix d'une stratégie d'investissement et site de démonstration autour de la question : do political trades pay off?",
-      },
-      {
-        date: "2022",
-        title: "Concours",
-        description:
-          "Participation au Concours Général de Mathématiques et vainqueur du concours de physique du Lions Club.",
-      },
-    ],
-    activities: [
-      {
-        date: "Septembre 2021 - actuel",
-        title: "Chef scout",
-        description: "Expérience de leadership et d'encadrement de jeunes comme chef scout.",
-      },
-      {
-        date: "2017 - actuel",
-        title: "Association des soirées lyriques de Sanxay",
-        description: "Membre de l'association participant à l'organisation d'événements lyriques à Sanxay.",
-      },
-      {
-        date: "Sports et musique",
-        title: "Centres d'intérêt",
-        description: "Handball, voile, trompette, guitare et judo avec ceinture marron.",
-      },
-    ],
-  },
-};
-
-const DEFAULT_LANGUAGE = "en";
+  };
 
 function getNestedValue(source, path) {
   return path.split(".").reduce((value, key) => value?.[key], source);
 }
 
-function getLanguage() {
-  const savedLanguage = localStorage.getItem("language");
-  return savedLanguage && content[savedLanguage] ? savedLanguage : DEFAULT_LANGUAGE;
-}
-
-function setStaticText(language) {
-  document.documentElement.lang = language;
+function setStaticText() {
+  document.documentElement.lang = "en";
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
-    const value = getNestedValue(content[language], node.dataset.i18n);
+    const value = getNestedValue(content, node.dataset.i18n);
     if (typeof value === "string") {
       node.textContent = value;
     }
   });
 
   document.querySelectorAll("[data-doc='cv-en']").forEach((node) => {
-    node.textContent = content[language].documents.cvEn;
-  });
-
-  document.querySelectorAll("[data-doc='cv-fr']").forEach((node) => {
-    node.textContent = content[language].documents.cvFr;
-  });
-
-  document.querySelectorAll("[data-lang]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.lang === language));
+    node.textContent = content.documents.cvEn;
   });
 }
 
@@ -669,11 +339,11 @@ function timelineItem(item) {
   `;
 }
 
-function renderProjects(language) {
+function renderProjects() {
   const grid = document.querySelector("#projectsGrid");
   if (!grid) return;
 
-  grid.innerHTML = content[language].projects
+  grid.innerHTML = content.projects
     .map((project, projectIndex) => {
       const media = projectMedia(project);
       return `
@@ -706,7 +376,7 @@ function renderProjects(language) {
     })
     .join("");
 
-  bindProjectCarousels(language);
+  bindProjectCarousels();
 }
 
 function projectMedia(project) {
@@ -763,15 +433,14 @@ function ensureLightbox() {
 }
 
 const lightboxState = {
-  language: DEFAULT_LANGUAGE,
   projectIndex: 0,
   imageIndex: 0,
 };
 
-function bindProjectCarousels(language) {
+function bindProjectCarousels() {
   document.querySelectorAll("[data-carousel-project]").forEach((carousel) => {
     const projectIndex = Number(carousel.dataset.carouselProject);
-    const project = content[language].projects[projectIndex];
+    const project = content.projects[projectIndex];
     const media = projectMedia(project);
     const stage = carousel.querySelector(".carousel-stage");
     const openButton = carousel.querySelector(".carousel-open");
@@ -790,13 +459,12 @@ function bindProjectCarousels(language) {
 
     count.hidden = media.length < 2;
     openButton.addEventListener("click", () => {
-      openLightbox(language, projectIndex, Number(stage.dataset.imageIndex));
+      openLightbox(projectIndex, Number(stage.dataset.imageIndex));
     });
   });
 }
 
-function openLightbox(language, projectIndex, imageIndex) {
-  lightboxState.language = language;
+function openLightbox(projectIndex, imageIndex) {
   lightboxState.projectIndex = projectIndex;
   lightboxState.imageIndex = imageIndex;
   ensureLightbox().hidden = false;
@@ -812,14 +480,14 @@ function closeLightbox() {
 }
 
 function stepLightbox(direction) {
-  const project = content[lightboxState.language].projects[lightboxState.projectIndex];
+  const project = content.projects[lightboxState.projectIndex];
   const media = projectMedia(project);
   lightboxState.imageIndex = (lightboxState.imageIndex + direction + media.length) % media.length;
   updateLightbox();
 }
 
 function updateLightbox() {
-  const project = content[lightboxState.language].projects[lightboxState.projectIndex];
+  const project = content.projects[lightboxState.projectIndex];
   const media = projectMedia(project);
   const lightbox = ensureLightbox();
   lightbox.querySelector(".lightbox-media").innerHTML = mediaMarkup(media[lightboxState.imageIndex], project.title, lightboxState.imageIndex);
@@ -834,11 +502,11 @@ function handleLightboxKeys(event) {
   if (event.key === "ArrowRight") stepLightbox(1);
 }
 
-function renderSkills(language) {
+function renderSkills() {
   const grid = document.querySelector("#skillsGrid");
   if (!grid) return;
 
-  grid.innerHTML = content[language].skillsList
+  grid.innerHTML = content.skillsList
     .map(
       (group) => `
         <article class="skill-card">
@@ -858,27 +526,16 @@ function renderTimeline(selector, items) {
   timeline.innerHTML = items.map(timelineItem).join("");
 }
 
-function renderPage(language) {
-  setStaticText(language);
-  renderProjects(language);
-  renderSkills(language);
-  renderTimeline("#academicResults", content[language].academics);
-  renderTimeline("#cvHighlights", content[language].highlights);
-  renderTimeline("#educationList", content[language].education);
-  renderTimeline("#experienceList", content[language].experience);
-  renderTimeline("#cvProjectsList", content[language].cvProjects);
-  renderTimeline("#activitiesList", content[language].activities);
+function renderPage() {
+  setStaticText();
+  renderProjects();
+  renderSkills();
+  renderTimeline("#academicResults", content.academics);
+  renderTimeline("#cvHighlights", content.highlights);
+  renderTimeline("#educationList", content.education);
+  renderTimeline("#experienceList", content.experience);
+  renderTimeline("#cvProjectsList", content.cvProjects);
+  renderTimeline("#activitiesList", content.activities);
 }
 
-function bindLanguageSwitch() {
-  document.querySelectorAll("[data-lang]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const language = button.dataset.lang;
-      localStorage.setItem("language", language);
-      renderPage(language);
-    });
-  });
-}
-
-bindLanguageSwitch();
-renderPage(getLanguage());
+renderPage();

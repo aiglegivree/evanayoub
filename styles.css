@@ -65,7 +65,6 @@ nav,
 .hero-actions,
 .contact-links,
 .header-actions,
-.language-switch,
 .document-actions {
   display: flex;
   align-items: center;
@@ -97,53 +96,6 @@ nav {
 .header-actions {
   justify-content: flex-end;
   gap: 1rem;
-}
-
-.language-switch {
-  position: relative;
-  flex: 0 0 auto;
-  gap: 0.2rem;
-  padding: 0.22rem;
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(216, 210, 198, 0.95);
-  border-radius: 999px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 8px 22px rgba(23, 32, 27, 0.08);
-}
-
-.language-switch button {
-  min-width: 2.85rem;
-  min-height: 2rem;
-  padding: 0.35rem 0.75rem;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.language-switch button[aria-pressed="true"] {
-  background: var(--accent);
-  color: var(--bg);
-  box-shadow: 0 5px 14px rgba(14, 111, 104, 0.24);
-}
-
-.language-switch button:hover {
-  color: var(--accent-strong);
-}
-
-.language-switch button[aria-pressed="true"]:hover {
-  color: var(--bg);
-  transform: translateY(-1px);
-}
-
-.language-switch button:focus-visible {
-  outline: 2px solid var(--warm);
-  outline-offset: 2px;
 }
 
 nav a:hover,
@@ -698,10 +650,6 @@ footer p {
     width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
-  }
-
-  .language-switch {
-    align-self: flex-start;
   }
 
   h1 {
