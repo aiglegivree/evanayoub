@@ -1,11 +1,11 @@
-# Ayoub Evan Portfolio
+# Evan Ayoub Portfolio
 
 Static portfolio website for GitHub Pages.
 
 ## Edit Your Content
 
 - Update bilingual profile text, projects, CV highlights, and academic results in `script.js`.
-- Update structure or links in `index.html` and `cv.html`.
+- Update structure or links in `index.html`.
 - Replace project placeholders inside `assets/projects/`.
 - Replace CV PDFs in `assets/cv/` and the academic record in `assets/academic/`.
 

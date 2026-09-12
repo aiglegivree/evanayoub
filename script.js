@@ -86,8 +86,6 @@ const content = {
           "assets/projects/valobot/img2.jpg",
           "assets/projects/valobot/img3.jpg",
           "assets/projects/valobot/img4.jpg",
-          "assets/projects/valobot/img5.jpg",
-          "assets/projects/valobot/img1.jpg",
         ],
         tags: ["Computer Vision", "Electronics", "Motor Control", "CAD", "Mechanics", "Python"],
       },
@@ -98,6 +96,23 @@ const content = {
         image: "assets/projects/sola/IMG1.JPEG",
         gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
         tags: ["PCB Design", "MPPT", "Embedded Electronics"],
+      },
+      {
+        title: "Aerial Robotics Gate Navigation",
+        description:
+          "Aerial robotics course project focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
+        image: "assets/projects/aerial/video1-silent.mp4",
+        gallery: [
+          {
+            type: "video",
+            src: "assets/projects/aerial/video1-silent.mp4",
+          },
+          {
+            type: "video",
+            src: "assets/projects/aerial/video2-silent.mp4",
+          },
+        ],
+        tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Project"],
       },
       {
         title: "Thymio Mobile Robot Navigation",
@@ -368,8 +383,6 @@ const content = {
           "assets/projects/valobot/img2.jpg",
           "assets/projects/valobot/img3.jpg",
           "assets/projects/valobot/img4.jpg",
-          "assets/projects/valobot/img5.jpg",
-          "assets/projects/valobot/img1.jpg",
         ],
         tags: ["Vision par ordinateur", "Électronique", "Contrôle moteur", "CAO", "Mécanique", "Python"],
       },
@@ -380,6 +393,23 @@ const content = {
         image: "assets/projects/sola/IMG1.JPEG",
         gallery: ["assets/projects/sola/IMG1.JPEG", "assets/projects/sola/IMG2.JPEG"],
         tags: ["Design PCB", "MPPT", "Électronique embarquée"],
+      },
+      {
+        title: "Robotique aerienne - navigation entre portes",
+        description:
+          "Projet de cours en robotique aerienne centre sur la navigation autonome rapide entre des portes. J'ai d'abord developpe un controleur en simulation Webots pour detecter les portes et les traverser le plus vite possible, puis nous avons adapte l'approche en equipe sur un drone reel avec des portes physiques.",
+        image: "assets/projects/aerial/video1-silent.mp4",
+        gallery: [
+          {
+            type: "video",
+            src: "assets/projects/aerial/video1-silent.mp4",
+          },
+          {
+            type: "video",
+            src: "assets/projects/aerial/video2-silent.mp4",
+          },
+        ],
+        tags: ["Robotique aerienne", "Controle de drone", "Vision par ordinateur", "Webots", "Navigation autonome", "Projet en equipe"],
       },
       {
         title: "Navigation mobile avec Thymio",
@@ -666,7 +696,7 @@ function normalizeMedia(item) {
 
 function mediaMarkup(media, title, index) {
   if (media.type === "video") {
-    return `<video src="${media.src}" ${media.poster ? `poster="${media.poster}"` : ""} controls preload="metadata" playsinline aria-label="${title} video ${index + 1}"></video>`;
+    return `<video src="${media.src}" ${media.poster ? `poster="${media.poster}"` : ""} controls muted preload="metadata" playsinline aria-label="${title} video ${index + 1}"></video>`;
   }
 
   return `<img src="${media.src}" alt="${title} photo ${index + 1}" />`;

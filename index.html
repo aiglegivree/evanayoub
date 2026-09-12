@@ -18,11 +18,11 @@
       </a>
       <div class="header-actions">
         <nav aria-label="Main navigation">
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#education" data-i18n="cv.education.title">Education</a>
+          <a href="#experience" data-i18n="cv.experience.title">Experience</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
           <a href="#skills" data-i18n="nav.skills">Skills</a>
-          <a href="#academics" data-i18n="nav.academics">Academic Results</a>
-          <a href="#cv" data-i18n="nav.cv">CV</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="language-switch" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -42,72 +42,11 @@
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#projects" data-i18n="home.hero.primary">View projects</a>
-            <a class="button secondary" href="cv.html" data-i18n="home.hero.secondary">Open CV</a>
+            <a class="button secondary" href="assets/cv/CV_2026_en.pdf" target="_blank" rel="noreferrer" data-doc="cv-en">
+              CV PDF
+            </a>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src="assets/projects/profile/IMG_5645.JPEG" alt="Portrait of Evan Ayoub" />
-        </div>
-      </section>
-
-      <section class="section intro" aria-label="Profile summary">
-        <div>
-          <p class="section-label" data-i18n="home.about.label">About</p>
-          <h2 data-i18n="home.about.title">Hi, I am Evan.</h2>
-        </div>
-        <p data-i18n="home.about.text">
-          I am a French and Lebanese engineer-in-training working at the intersection of robotics,
-          electronics, and software. I like projects where perception, control, and clean interfaces
-          meet in a real working system.
-        </p>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.projects.label">Selected Work</p>
-          <h2 data-i18n="home.projects.title">Projects</h2>
-        </div>
-        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.skills.label">Technical Profile</p>
-          <h2 data-i18n="home.skills.title">Skills</h2>
-        </div>
-        <div class="skills-grid" id="skillsGrid"></div>
-      </section>
-
-      <section class="section" id="academics">
-        <div class="section-heading">
-          <p class="section-label" data-i18n="home.academics.label">Academic Results</p>
-          <h2 data-i18n="home.academics.title">Education and results</h2>
-        </div>
-        <div class="academic-grid" id="academicResults"></div>
-        <div class="document-actions">
-          <a class="button primary" href="assets/academic/relevenote.pdf" target="_blank" rel="noreferrer" data-i18n="home.academics.transcript">
-            Open academic record
-          </a>
-          <a class="button secondary" href="assets/cv/CV_2026_en.pdf" target="_blank" rel="noreferrer" data-doc="cv-en">
-            CV PDF
-          </a>
-          <a class="button secondary" href="assets/cv/CV_2026_fr.pdf" target="_blank" rel="noreferrer" data-doc="cv-fr">
-            CV PDF FR
-          </a>
-        </div>
-      </section>
-
-      <section class="section split" id="cv">
-        <div>
-          <p class="section-label" data-i18n="home.cv.label">CV</p>
-          <h2 data-i18n="home.cv.title">Experience and skills</h2>
-          <p data-i18n="home.cv.text">
-            Robotics projects, tutoring and teaching assistant experience, embedded electronics,
-            data analysis, and technical tools.
-          </p>
-          <a class="button primary" href="cv.html" data-i18n="home.cv.link">Open CV page</a>
-        </div>
-        <div class="timeline" id="cvHighlights" aria-label="CV highlights"></div>
       </section>
 
       <section class="section contact" id="contact">
@@ -115,11 +54,70 @@
           <p class="section-label" data-i18n="home.contact.label">Contact</p>
           <h2 data-i18n="home.contact.title">Let us build something useful.</h2>
         </div>
-        <div class="contact-links">
-          <a href="mailto:ayoubevan13@gmail.com">ayoubevan13@gmail.com</a>
-          <a href="https://github.com/aiglegivree" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/evan-joseph-gerard-ayoub" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div>
+          <div class="contact-links">
+            <a href="mailto:ayoubevan13@gmail.com">ayoubevan13@gmail.com</a>
+            <a href="https://github.com/aiglegivree" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/evan-joseph-gerard-ayoub" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <div class="document-actions">
+            <a class="button primary" href="assets/cv/CV_2026_en.pdf" target="_blank" rel="noreferrer" data-doc="cv-en">
+              CV PDF
+            </a>
+            <a class="button secondary" href="assets/cv/CV_2026_fr.pdf" target="_blank" rel="noreferrer" data-doc="cv-fr">
+              CV PDF FR
+            </a>
+            <a class="button secondary" href="assets/academic/relevenote.pdf" target="_blank" rel="noreferrer" data-i18n="home.academics.transcript">
+              Open academic record
+            </a>
+          </div>
         </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.academics.label">Academic Results</p>
+          <h2 data-i18n="cv.education.title">Education</h2>
+        </div>
+        <div class="timeline" id="educationList"></div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.cv.label">CV</p>
+          <h2 data-i18n="cv.experience.title">Experience</h2>
+        </div>
+        <div class="timeline" id="experienceList"></div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.projects.label">Selected Work</p>
+          <h2 data-i18n="cv.projects.title">Projects and awards</h2>
+        </div>
+        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <p class="section-label" data-i18n="home.skills.label">Technical Profile</p>
+          <h2 data-i18n="cv.skills.title">Skills</h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+        <div class="timeline compact-timeline">
+          <article class="timeline-item">
+            <h3 data-i18n="cv.languages.title">Languages</h3>
+            <p data-i18n="cv.languages.items">French and Lebanese: native. English: C2. Spanish: B2.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="activities">
+        <div>
+          <p class="section-label" data-i18n="cv.activities.title">Activities</p>
+          <h2 data-i18n="cv.activities.title">Activities</h2>
+        </div>
+        <div class="timeline" id="activitiesList"></div>
       </section>
     </main>
 
