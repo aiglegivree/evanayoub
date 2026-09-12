@@ -96,38 +96,6 @@ const content = {
         tags: ["PCB Design", "MPPT", "Embedded Electronics", "Team Work"],
       },
       {
-        title: "Aerial Robotics Gate Navigation",
-        description:
-          "Aerial robotics course project graded 5.25/6, focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
-        image: "assets/projects/aerial/video1.mp4",
-        gallery: [
-          {
-            type: "video",
-            src: "assets/projects/aerial/video1.mp4",
-          },
-          {
-            type: "video",
-            src: "assets/projects/aerial/video2.mp4",
-          },
-        ],
-        tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Work"],
-      },
-      {
-        title: "Image Analysis and Pattern Recognition",
-        description:
-          "Course project graded 5.75/6 in image analysis and pattern recognition. The goal was to detect UNO cards on a table, classify each card, and attribute the detected cards to the correct player.",
-        websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
-        websiteLabel: "Open presentation",
-        image: "assets/projects/image-analysis/img1.png",
-        gallery: [
-          "assets/projects/image-analysis/img1.png",
-          "assets/projects/image-analysis/img2.png",
-          "assets/projects/image-analysis/img3.png",
-          "assets/projects/image-analysis/img4.png",
-        ],
-        tags: ["Image Analysis", "Pattern Recognition", "Computer Vision", "Feature Extraction", "Classification", "CNN", "Deep Learning", "Segmentation", "Data Augmentation", "Team Work"],
-      },
-      {
         title: "Thymio Mobile Robot Navigation",
         description:
           "Mobile robotics class project graded 6/6, where a Thymio robot navigates from start to goal using A* path planning, ArUco-based computer vision localization, EKF sensor fusion, ToF obstacle avoidance, kidnapping recovery, and automatic replanning.",
@@ -147,6 +115,21 @@ const content = {
         tags: ["Mobile Robotics", "A*", "Computer Vision", "EKF", "ArUco", "Obstacle Avoidance", "Python", "Team Work"],
       },
       {
+        title: "Image Analysis and Pattern Recognition",
+        description:
+          "Course project graded 5.75/6 in image analysis and pattern recognition. The goal was to detect UNO cards on a table, classify each card, and attribute the detected cards to the correct player.",
+        websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
+        websiteLabel: "Open presentation",
+        image: "assets/projects/image-analysis/img1.png",
+        gallery: [
+          "assets/projects/image-analysis/img1.png",
+          "assets/projects/image-analysis/img2.png",
+          "assets/projects/image-analysis/img3.png",
+          "assets/projects/image-analysis/img4.png",
+        ],
+        tags: ["Image Analysis", "Pattern Recognition", "Computer Vision", "Feature Extraction", "Classification", "CNN", "Deep Learning", "Segmentation", "Data Augmentation", "Team Work"],
+      },
+      {
         title: "Copycat Portfolios",
         description:
           "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
@@ -160,23 +143,40 @@ const content = {
         ],
         tags: ["Data Analysis", "Python", "Web Demo", "Finance", "Statistics & Probability", "Team Work"],
       },
+      {
+        title: "Aerial Robotics Gate Navigation",
+        description:
+          "Aerial robotics course project graded 5.25/6, focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
+        image: "assets/projects/aerial/video1.mp4",
+        gallery: [
+          {
+            type: "video",
+            src: "assets/projects/aerial/video1.mp4",
+          },
+          {
+            type: "video",
+            src: "assets/projects/aerial/video2.mp4",
+          },
+        ],
+        tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Work"],
+      },
     ],
     skillsList: [
       {
-        title: "Robotics and perception",
-        items: ["Mobile robotics", "Computer vision", "Image processing", "FPV drones"],
+        title: "Robotics and control",
+        items: ["Mobile robotics", "Aerial robotics", "Autonomous navigation", "Path planning", "Motor control"],
       },
       {
-        title: "Electronics and embedded systems",
-        items: ["PCB design", "Raspberry Pi", "Arduino", "Sensors", "Batteries", "Motors"],
+        title: "Computer vision and AI",
+        items: ["Computer vision", "Image analysis", "Pattern recognition", "CNNs", "Segmentation", "Deep learning"],
       },
       {
-        title: "Data and AI",
-        items: ["Data analysis", "Machine learning", "Deep learning", "PyTorch", "TensorFlow"],
+        title: "Electronics and design",
+        items: ["PCB design", "Embedded electronics", "MPPT", "Sensors", "CAD", "Mechanics"],
       },
       {
         title: "Programming and tools",
-        items: ["Python", "C/C++", "OpenCV", "NumPy", "Pandas", "Git", "MATLAB", "Webots", "Catia", "KiCad", "LTspice"],
+        items: ["Python", "C/C++", "OpenCV", "NumPy", "Pandas", "Git", "Webots", "KiCad"],
       },
     ],
     academics: [
