@@ -100,7 +100,7 @@ const content = {
       {
         title: "Aerial Robotics Gate Navigation",
         description:
-          "Aerial robotics course project focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
+          "Aerial robotics course project graded 5.25/6, focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
         image: "assets/projects/aerial/video1-silent.mp4",
         gallery: [
           {
@@ -113,6 +113,16 @@ const content = {
           },
         ],
         tags: ["Aerial Robotics", "Drone Control", "Computer Vision", "Webots", "Autonomous Navigation", "Team Project"],
+      },
+      {
+        title: "Image Analysis and Pattern Recognition",
+        description:
+          "Course project graded 5.75/6 in image analysis and pattern recognition. The work focused on extracting meaningful visual information from images, building a recognition pipeline, evaluating model behavior, and presenting the results clearly through a final slide deck.",
+        websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
+        websiteLabel: "Open presentation",
+        image: "assets/projects/image-analysis/pattern-recognition.svg",
+        gallery: ["assets/projects/image-analysis/pattern-recognition.svg"],
+        tags: ["Image Analysis", "Pattern Recognition", "Computer Vision", "Feature Extraction", "Classification", "Python"],
       },
       {
         title: "Thymio Mobile Robot Navigation",
@@ -397,7 +407,7 @@ const content = {
       {
         title: "Robotique aerienne - navigation entre portes",
         description:
-          "Projet de cours en robotique aerienne centre sur la navigation autonome rapide entre des portes. J'ai d'abord developpe un controleur en simulation Webots pour detecter les portes et les traverser le plus vite possible, puis nous avons adapte l'approche en equipe sur un drone reel avec des portes physiques.",
+          "Projet de cours en robotique aerienne note 5.25/6, centre sur la navigation autonome rapide entre des portes. J'ai d'abord developpe un controleur en simulation Webots pour detecter les portes et les traverser le plus vite possible, puis nous avons adapte l'approche en equipe sur un drone reel avec des portes physiques.",
         image: "assets/projects/aerial/video1-silent.mp4",
         gallery: [
           {
@@ -410,6 +420,16 @@ const content = {
           },
         ],
         tags: ["Robotique aerienne", "Controle de drone", "Vision par ordinateur", "Webots", "Navigation autonome", "Projet en equipe"],
+      },
+      {
+        title: "Analyse d'image et reconnaissance de formes",
+        description:
+          "Projet de cours note 5.75/6 en analyse d'image et reconnaissance de formes. Le travail portait sur l'extraction d'informations visuelles pertinentes, la construction d'une chaine de reconnaissance, l'evaluation du comportement du modele et la presentation claire des resultats dans un diaporama final.",
+        websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
+        websiteLabel: "Ouvrir la presentation",
+        image: "assets/projects/image-analysis/pattern-recognition.svg",
+        gallery: ["assets/projects/image-analysis/pattern-recognition.svg"],
+        tags: ["Analyse d'image", "Reconnaissance de formes", "Vision par ordinateur", "Extraction de caracteristiques", "Classification", "Python"],
       },
       {
         title: "Navigation mobile avec Thymio",
