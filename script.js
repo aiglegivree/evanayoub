@@ -73,7 +73,7 @@ const content = {
       },
       education: { title: "Education" },
       experience: { title: "Experience" },
-      projects: { title: "Projects and awards" },
+      projects: { title: "Projects" },
       activities: { title: "Activities" },
     },
     projects: [
@@ -385,7 +385,7 @@ const content = {
       },
       education: { title: "Formation" },
       experience: { title: "Expérience" },
-      projects: { title: "Projets et concours" },
+      projects: { title: "Projets" },
       activities: { title: "Activités" },
     },
     projects: [
