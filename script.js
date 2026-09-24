@@ -16,7 +16,7 @@ const content = {
         eyebrow: "Final-year robotics engineering student",
         title: "Evan Ayoub",
         text:
-          "Robotics student at EPFL with a Data Science minor, interested in electronics, coding, computer vision, CAD, and mechanics.",
+          "Robotics MSc student at EPFL specializing in computer vision, embedded systems and autonomous systems, with hands-on experience in vision-based mobile robots, aerial robotics and power electronics.",
         primary: "View projects",
         secondary: "Open CV",
       },
@@ -97,7 +97,7 @@ const content = {
         tags: ["Deep Learning", "Computer Vision", "CNN", "Transformers", "Edge AI"],
       },
       {
-        title: "Valobot - Robopoly Robotics Competition",
+        title: "1st Place — Camera-Only Autonomous Robot at Robopoly Competition | EPFL",
         description:
           "Winner of the EPFL Robopoly robotics competition with an autonomous robot relying only on camera vision. The robot handled line tracking, corridor tracking, and target shooting autonomously.",
         image: "assets/projects/valobot/img2.jpg",
@@ -109,7 +109,7 @@ const content = {
         tags: ["Computer Vision", "Electronics", "Motor Control", "CAD", "Mechanics", "Python", "Team Work"],
       },
       {
-        title: "Sola Project MPPT and Power Circuit",
+        title: "MPPT & Power Electronics PCB for a Solar Aircraft | Sola Project, EPFL",
         description:
           "Power electronics work for a solar aircraft: design and assembly of the power circuit PCB, with a focus on the maximum power point tracker.",
         image: "assets/projects/sola/IMG1.JPEG",
@@ -117,7 +117,7 @@ const content = {
         tags: ["PCB Design", "MPPT", "Embedded Electronics", "Team Work"],
       },
       {
-        title: "Thymio Mobile Robot Navigation",
+        title: "Autonomous Thymio Navigation with Vision & Sensor Fusion | EPFL",
         description:
           "Mobile robotics class project graded 6/6, where a Thymio robot navigates from start to goal using A* path planning, ArUco-based computer vision localization, EKF sensor fusion, ToF obstacle avoidance, kidnapping recovery, and automatic replanning.",
         image: "assets/thymio/video1-poster.jpg",
@@ -136,7 +136,7 @@ const content = {
         tags: ["Mobile Robotics", "A*", "Computer Vision", "EKF", "ArUco", "Obstacle Avoidance", "Python", "Team Work"],
       },
       {
-        title: "Image Analysis and Pattern Recognition",
+        title: "Deep Learning for UNO Card Recognition & Player Attribution | EPFL",
         description:
           "Course project graded 5.75/6 in image analysis and pattern recognition. The goal was to detect UNO cards on a table, classify each card, and attribute the detected cards to the correct player.",
         websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
@@ -151,7 +151,7 @@ const content = {
         tags: ["Image Analysis", "Pattern Recognition", "Computer Vision", "Feature Extraction", "Classification", "CNN", "Deep Learning", "Segmentation", "Data Augmentation", "Team Work"],
       },
       {
-        title: "Copycat Portfolios",
+        title: "Statistical Data Analysis of Political Trading — Copycat Portfolios | EPFL",
         description:
           "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
         websiteUrl: "https://ada-2025-project-adaptateurusbversu.vercel.app/",
@@ -165,7 +165,7 @@ const content = {
         tags: ["Data Analysis", "Python", "Web Demo", "Finance", "Statistics & Probability", "Team Work"],
       },
       {
-        title: "Aerial Robotics Gate Navigation",
+        title: "High-Speed Autonomous Drone Gate Navigation | EPFL",
         description:
           "Aerial robotics course project graded 5.25/6, focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
         image: "assets/projects/aerial/video1.mp4",
@@ -269,19 +269,19 @@ const content = {
     experience: [
       {
         date: "September 2023 - current",
-        title: "Tutoring and Teaching Assistant Experience",
+        title: "Teaching Assistant and Mathematics/Physics Tutor | EPFL & Apprenons Ensemble",
         description:
           "Tutor for students from elementary school to apprenticeship and gymnasium levels through Apprenons Ensemble. Teaching assistant for EPFL electrical and electronic systems and mechanical physics courses.",
       },
       {
         date: "April 2022",
-        title: "Observation Internship - Shark Robotics",
+        title: "Robotics Internship in R&D for mobile robotics | Shark Robotics",
         description:
           "Observation internship exploring the R&D work, engineering environment, and organization of a robotics company.",
       },
       {
         date: "September 2020 - July 2022",
-        title: "Programming and Mathematics Courses",
+        title: "Programming and Mathematics Instructor | Lycée Fénelon Notre-Dame, La Rochelle",
         description:
           "Introduced high school students to programming, especially Python, and to practical applications of mathematics in code.",
       },
