@@ -275,6 +275,18 @@ h3 {
   color: var(--muted);
 }
 
+.project-body .project-meta {
+  margin-bottom: 0.5rem;
+  color: var(--warm);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.project-placeholder {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .project-inline-link {
   display: inline-block;
   margin-left: 0.25rem;

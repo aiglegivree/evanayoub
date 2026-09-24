@@ -77,6 +77,26 @@ const content = {
     },
     projects: [
       {
+        title: "Space Robotics for the European Rover Challenge — Handling Device System Team | EPFL Xplore",
+        category: "MAKE project",
+        date: "September 2026 – Present",
+        description:
+          "Member of the Handling Device System (HDS) team within EPFL Xplore, developing Martian rover and drone systems for the European Rover Challenge.",
+        // Add photo paths from assets/projects/xplore-hds/ to this gallery.
+        gallery: ["assets/projects/xplore-hds/img1.webp"],
+        tags: ["Space Robotics", "Handling Device System", "Martian Rover", "Team Work"],
+      },
+      {
+        title: "Deep Learning for Visual Material Recognition on Edge Devices | DISAL, EPFL",
+        category: "Semester project",
+        date: "September 2026 – Present",
+        description:
+          "Developing and evaluating deep-learning methods to classify materials from visual data, including benchmarking baseline models, investigating convolutional and transformer-based architectures, and deploying inference on resource-constrained edge devices.",
+        // Add photo paths from assets/projects/material-recognition/ to this gallery.
+        gallery: ["assets/projects/material-recognition/img1.jpg"],
+        tags: ["Deep Learning", "Computer Vision", "CNN", "Transformers", "Edge AI"],
+      },
+      {
         title: "Valobot - Robopoly Robotics Competition",
         description:
           "Winner of the EPFL Robopoly robotics competition with an autonomous robot relying only on camera vision. The robot handled line tracking, corridor tracking, and target shooting autonomously.",
@@ -353,6 +373,7 @@ function renderProjects() {
       const media = projectMedia(project);
       return `
         <article class="project-card">
+          ${media.length ? `
           <div class="project-carousel" data-carousel-project="${projectIndex}" aria-label="${project.title} photos">
             <button class="carousel-nav previous" type="button" data-carousel-step="-1" aria-label="Previous ${project.title} photo">‹</button>
             <div class="carousel-stage" data-image-index="0">
@@ -362,7 +383,9 @@ function renderProjects() {
             <button class="carousel-nav next" type="button" data-carousel-step="1" aria-label="Next ${project.title} photo">›</button>
             <div class="carousel-count" aria-live="polite">1/${media.length}</div>
           </div>
+          ` : `<div class="project-carousel project-placeholder"><span>Photos coming soon</span></div>`}
           <div class="project-body">
+            ${project.category ? `<p class="project-meta">${project.category} | ${project.date}</p>` : ""}
             <h3>${project.title}</h3>
             <p>
               ${project.description}
