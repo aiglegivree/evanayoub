@@ -77,17 +77,17 @@ const content = {
     },
     projects: [
       {
-        title: "Space Robotics for the European Rover Challenge — Handling Device System Team | EPFL Xplore",
+        title: "Vision-Guided Robotic Manipulation for the European Rover Challenge | EPFL Xplore",
         category: "MAKE project",
         date: "September 2026 – Present",
         description:
-          "Member of the Handling Device System (HDS) team within EPFL Xplore, developing Martian rover and drone systems for the European Rover Challenge.",
+          "Developing a vision-guided robotic manipulation system to detect and track target objects, control a rover-mounted arm, and execute reliable pick-and-place operations involving complex movements.",
         // Add photo paths from assets/projects/xplore-hds/ to this gallery.
         gallery: ["assets/projects/xplore-hds/img1.webp"],
-        tags: ["Space Robotics", "Handling Device System", "Martian Rover", "Team Work"],
+        tags: ["Robotic Manipulation", "Computer Vision", "Object Tracking", "Robotic Arm", "Pick and Place", "Team Work"],
       },
       {
-        title: "Deep Learning for Visual Material Recognition on Edge Devices | DISAL, EPFL",
+        title: "Deep Learning for Visual Material Segmentation on Edge Devices | DISAL, EPFL",
         category: "Semester project",
         date: "September 2026 – Present",
         description:
@@ -136,9 +136,9 @@ const content = {
         tags: ["Mobile Robotics", "A*", "Computer Vision", "EKF", "ArUco", "Obstacle Avoidance", "Python", "Team Work"],
       },
       {
-        title: "Deep Learning for UNO Card Recognition & Player Attribution | EPFL",
+        title: "2nd Place — Deep Learning for the UNO Vision Challenge: Card Recognition & Player Attribution | EPFL",
         description:
-          "Course project graded 5.75/6 in image analysis and pattern recognition. The goal was to detect UNO cards on a table, classify each card, and attribute the detected cards to the correct player.",
+          "Detected UNO cards on a table, classified each card and attributed the detected cards to the correct player.",
         websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
         websiteLabel: "Open presentation",
         image: "assets/projects/image-analysis/img1.png",
@@ -240,7 +240,7 @@ const content = {
         date: "2023 - current",
         title: "Tutoring and TA experience",
         description:
-          "Tutoring in mathematics, physics, and electronics; EPFL teaching assistant work in electrical systems and mechanical physics.",
+          "Tutoring in mathematics, physics, and electronics; EPFL teaching assistant work in electrical and electronic systems, mechanical physics, and mobile robotics.",
       },
     ],
     education: [
@@ -271,7 +271,7 @@ const content = {
         date: "September 2023 - current",
         title: "Teaching Assistant and Mathematics/Physics Tutor | EPFL & Apprenons Ensemble",
         description:
-          "Tutor for students from elementary school to apprenticeship and gymnasium levels through Apprenons Ensemble. Teaching assistant for EPFL electrical and electronic systems and mechanical physics courses.",
+          "Tutor students in mathematics, physics and electronics across secondary, gymnasium and university levels. Serve as a teaching assistant for Electrical and Electronic Systems, Mechanical Physics and Mobile Robotics courses.",
       },
       {
         date: "April 2022",
