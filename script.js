@@ -77,6 +77,23 @@ const content = {
     },
     projects: [
       {
+        title: "Winner - Leukerbad Robotics Hackathon 2026",
+        category: "Hackathon | Grand Final & Autonomous Urban Services track winner",
+        date: "November 2026",
+        description:
+          "Co-developed Sisyphus, a low-cost mobile robot designed around interchangeable modules for different urban services. Combining manipulation, vision and autonomous navigation, its first application, Leukerbad Postman, identifies recipient names on envelopes and delivers them to matching mailboxes. Winner of both the Autonomous Urban Services track and the Grand Final.",
+        credits: "Built with Jérôme Courdacy, Vincent Lellu, Elias Pajot, Martin Mayer and Balthazar Bolze. Organized by Edelweiss Innovation & Intelligence Institute (EIII), Pedro Jinjun Dong and EuroTech Federation.",
+        websiteUrl: "assets/projects/sisyphus/sisyphus-presentation.pdf",
+        websiteLabel: "Open presentation",
+        gallery: [
+          { src: "assets/projects/sisyphus/awards.jpg", alt: "The six-person Sisyphus team with the robot at the Leukerbad awards ceremony" },
+          { type: "video", src: "assets/projects/sisyphus/demo.mp4", poster: "assets/projects/sisyphus/demo-poster.jpg", alt: "Accelerated demonstration of Sisyphus picking up and delivering letters" },
+          { src: "assets/projects/sisyphus/robot.jpg", alt: "Sisyphus mobile robot in front of the mountains in Leukerbad" },
+          { src: "assets/projects/sisyphus/team.jpg", alt: "The Sisyphus team and their robot in the Swiss Alps" },
+        ],
+        tags: ["Modular Hardware", "Robotic Manipulation", "Computer Vision", "Autonomous Navigation", "System Integration", "Team Work"],
+      },
+      {
         title: "Vision-Guided Robotic Manipulation for the European Rover Challenge | EPFL Xplore",
         category: "MAKE project",
         date: "September 2026 – Present",
@@ -288,6 +305,11 @@ const content = {
     ],
     cvProjects: [
       {
+        date: "November 2026",
+        title: "Overall & Autonomous Urban Services Track Winner — Leukerbad Robotics Hackathon",
+        description: "Co-developed Sisyphus in a six-person team: a low-cost, modular mobile robot that identifies recipient names on envelopes and delivers them to matching mailboxes using manipulation, vision and autonomous navigation.",
+      },
+      {
         date: "October 2025 - June 2026",
         title: "Robopoly Robotics Competition - EPFL",
         description:
@@ -395,6 +417,7 @@ function renderProjects() {
                   : ""
               }
             </p>
+            ${project.credits ? `<p class="project-credits">${project.credits}</p>` : ""}
             <div class="tags" aria-label="Technologies used">
               ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
             </div>
@@ -424,10 +447,10 @@ function normalizeMedia(item) {
 
 function mediaMarkup(media, title, index) {
   if (media.type === "video") {
-    return `<video src="${media.src}" ${media.poster ? `poster="${media.poster}"` : ""} controls muted preload="metadata" playsinline aria-label="${title} video ${index + 1}"></video>`;
+    return `<video src="${media.src}" ${media.poster ? `poster="${media.poster}"` : ""} controls muted preload="metadata" playsinline aria-label="${media.alt || `${title} video ${index + 1}`}"></video>`;
   }
 
-  return `<img src="${media.src}" alt="${title} photo ${index + 1}" />`;
+  return `<img src="${media.src}" alt="${media.alt || `${title} photo ${index + 1}`}" loading="lazy" />`;
 }
 
 function ensureLightbox() {
