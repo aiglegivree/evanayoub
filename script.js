@@ -97,8 +97,9 @@ const content = {
         date: "September 2026 – Present",
         description:
           "Developing a vision-guided robotic manipulation system to detect and track target objects, control a rover-mounted arm, and execute reliable pick-and-place operations involving complex movements.",
-        // Add photo paths from assets/projects/xplore-hds/ to this gallery.
-        gallery: ["assets/projects/xplore-hds/img1.webp"],
+        gallery: [
+          { src: "assets/projects/xplore-hds/polaris.jpg", alt: "Black-and-white photo of EPFL Xplore’s Polaris rover on rocky terrain" },
+        ],
         tags: ["Robotic Manipulation", "Computer Vision", "Object Tracking", "Robotic Arm", "Pick and Place", "Team Work"],
       },
       {

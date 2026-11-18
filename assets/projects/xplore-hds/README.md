@@ -3,11 +3,11 @@
 Place project pictures in this folder (for example, `img1.jpg` and `img2.jpg`).
 
 In the root `script.js`, find the Space Robotics project and add image paths to
-its `gallery` in display order. The current cover is `img1.webp`:
+its `gallery` in display order. The current cover is `polaris.jpg`:
 
 ```js
 gallery: [
-  "assets/projects/xplore-hds/img1.webp",
+  "assets/projects/xplore-hds/polaris.jpg",
   "assets/projects/xplore-hds/img2.jpg",
 ],
 ```
