@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-page="home">
+  <body id="top" data-page="home">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Evan Ayoub portfolio home">
         <span class="brand-mark">EA</span>
@@ -18,7 +18,7 @@
       </a>
       <div class="header-actions">
         <nav aria-label="Main navigation">
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#top" data-i18n="nav.contact">Contact</a>
           <a href="#education" data-i18n="cv.education.title">Education</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
           <a href="#experience" data-i18n="cv.experience.title">Experience</a>
@@ -29,7 +29,7 @@
       </div>
     </header>
 
-    <main id="top">
+    <main>
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="home.hero.eyebrow">Final-year robotics engineering student</p>
@@ -39,9 +39,25 @@
             with hands-on experience in vision-based mobile robots, aerial robotics and power electronics.
           </p>
           <div class="contact-links" id="contact">
-            <a href="mailto:ayoubevan13@gmail.com">ayoubevan13@gmail.com</a>
-            <a href="https://github.com/aiglegivree" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/evan-joseph-gerard-ayoub" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:ayoubevan13@gmail.com">
+              <svg class="contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <rect x="1.5" y="3" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+                <path d="m2 4.5 6 4 6-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              ayoubevan13@gmail.com
+            </a>
+            <a href="https://github.com/aiglegivree" target="_blank" rel="noreferrer">
+              <svg class="contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/evan-joseph-gerard-ayoub" target="_blank" rel="noreferrer">
+              <svg class="contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M2 0h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2ZM3 6h2v7H3Zm1-1a1.125 1.125 0 1 0 0-2.25A1.125 1.125 0 0 0 4 5Zm3 1h2v.9c.41-.64 1.02-1.07 2-1.07 1.58 0 2.25 1 2.25 2.74V13h-2V9.1c0-.93-.25-1.48-1.08-1.48C9.43 7.62 9 8.16 9 9.1V13H7Z" />
+              </svg>
+              LinkedIn
+            </a>
           </div>
         </div>
       </section>
