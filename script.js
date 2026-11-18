@@ -77,12 +77,12 @@ const content = {
     },
     projects: [
       {
-        title: "Winner - Leukerbad Robotics Hackathon 2026",
+        title: "1st Place - Leukerbad Robotics Hackathon 2026",
         category: "Hackathon | Grand Final & Autonomous Urban Services track winner",
         date: "November 2026",
         description:
           "Co-developed Sisyphus, a low-cost mobile robot designed around interchangeable modules for different urban services. Combining manipulation, vision and autonomous navigation, its first application, Leukerbad Postman, identifies recipient names on envelopes and delivers them to matching mailboxes. Winner of both the Autonomous Urban Services track and the Grand Final.",
-        credits: "Built with Jérôme Courdacy, Vincent Lellu, Elias Pajot, Martin Mayer and Balthazar Bolze. Organized by Edelweiss Innovation & Intelligence Institute (EIII), Pedro Jinjun Dong and EuroTech Federation.",
+        credits: "Organized by Edelweiss Innovation & Intelligence Institute (EIII) and EuroTech Federation.",
         websiteUrl: "assets/projects/sisyphus/sisyphus-presentation.pdf",
         websiteLabel: "Open presentation",
         gallery: [
@@ -104,14 +104,14 @@ const content = {
         tags: ["Robotic Manipulation", "Computer Vision", "Object Tracking", "Robotic Arm", "Pick and Place", "Team Work"],
       },
       {
-        title: "Deep Learning for Visual Material Segmentation on Edge Devices | DISAL, EPFL",
+        title: "Material Segmentation and Model Compression | DISAL, EPFL",
         category: "Semester project",
         date: "September 2026 – Present",
         description:
-          "Developing and evaluating deep-learning methods to classify materials from visual data, including benchmarking baseline models, investigating convolutional and transformer-based architectures, and deploying inference on resource-constrained edge devices.",
+          "Developed a deep-learning pipeline to recognize materials and segment them in everyday scenes from RGB images. Trained a ConvNeXt-based model with sparse annotations and applied structured pruning to reduce model size while preserving segmentation quality, toward deployment on resource-constrained devices.",
         // Add photo paths from assets/projects/material-recognition/ to this gallery.
         gallery: ["assets/projects/material-recognition/img1.jpg"],
-        tags: ["Deep Learning", "Computer Vision", "CNN", "Transformers", "Edge AI"],
+        tags: ["PyTorch", "ConvNeXt", "FPN", "Semantic Segmentation", "Sparse Supervision", "Structured Pruning"],
       },
       {
         title: "1st Place — Camera-Only Autonomous Robot at Robopoly Competition | EPFL",

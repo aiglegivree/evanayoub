@@ -271,13 +271,6 @@ h3 {
   padding: 1rem;
 }
 
-.achievement-link {
-  display: block;
-  margin: 1rem 0;
-  color: var(--accent);
-  font-weight: 700;
-}
-
 .project-body .project-credits {
   font-size: 0.85rem;
 }
