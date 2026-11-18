@@ -83,8 +83,6 @@ const content = {
         description:
           "Co-developed Sisyphus, a low-cost mobile robot designed around interchangeable modules for different urban services. Combining manipulation, vision and autonomous navigation, its first application, Leukerbad Postman, identifies recipient names on envelopes and delivers them to matching mailboxes. Winner of both the Autonomous Urban Services track and the Grand Final.",
         credits: "Organized by Edelweiss Innovation & Intelligence Institute (EIII) and EuroTech Federation.",
-        websiteUrl: "assets/projects/sisyphus/sisyphus-presentation.pdf",
-        websiteLabel: "Open presentation",
         gallery: [
           { src: "assets/projects/sisyphus/awards.jpg", alt: "The six-person Sisyphus team with the robot at the Leukerbad awards ceremony" },
           { type: "video", src: "assets/projects/sisyphus/demo.mp4", poster: "assets/projects/sisyphus/demo-poster.jpg", alt: "Accelerated demonstration of Sisyphus picking up and delivering letters" },
