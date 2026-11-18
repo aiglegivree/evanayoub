@@ -68,7 +68,7 @@ const content = {
       },
       languages: {
         title: "Languages",
-        items: "French and Lebanese: native. English: C2. Spanish: B2.",
+        items: "French and Lebanese: native. English: C2. Spanish: B2. German: beginner.",
       },
       education: { title: "Education" },
       experience: { title: "Experience" },
@@ -78,7 +78,7 @@ const content = {
     projects: [
       {
         title: "1st Place - Leukerbad Robotics Hackathon 2026",
-        category: "Hackathon | Grand Final & Autonomous Urban Services track winner",
+        category: "Hackathon",
         date: "November 2026",
         description:
           "Co-developed Sisyphus, a low-cost mobile robot designed around interchangeable modules for different urban services. Combining manipulation, vision and autonomous navigation, its first application, Leukerbad Postman, identifies recipient names on envelopes and delivers them to matching mailboxes. Winner of both the Autonomous Urban Services track and the Grand Final.",
@@ -103,17 +103,21 @@ const content = {
         tags: ["Robotic Manipulation", "Computer Vision", "Object Tracking", "Robotic Arm", "Pick and Place", "Team Work"],
       },
       {
-        title: "Material Segmentation and Model Compression | DISAL, EPFL",
+        title: "Material classification and segmentation in images | DISAL, EPFL",
         category: "Semester project",
         date: "September 2026 – Present",
         description:
           "Developed a deep-learning pipeline to recognize materials and segment them in everyday scenes from RGB images. Trained a ConvNeXt-based model with sparse annotations and applied structured pruning to reduce model size while preserving segmentation quality, toward deployment on resource-constrained devices.",
-        // Add photo paths from assets/projects/material-recognition/ to this gallery.
-        gallery: ["assets/projects/material-recognition/img1.jpg"],
+        gallery: [
+          { src: "assets/projects/material-recognition/midterm-predictions.png", alt: "Commercial kitchen RGB photo beside its predicted material segmentation map" },
+          { src: "assets/projects/material-recognition/report-pipeline.png", alt: "Report diagram showing how a ConvNeXt encoder and FPN decoder turn an RGB image into a material map" },
+        ],
         tags: ["PyTorch", "ConvNeXt", "FPN", "Semantic Segmentation", "Sparse Supervision", "Structured Pruning"],
       },
       {
         title: "1st Place — Camera-Only Autonomous Robot at Robopoly Competition | EPFL",
+        category: "Robotics competition",
+        date: "October 2025 – June 2026",
         description:
           "Winner of the EPFL Robopoly robotics competition with an autonomous robot relying only on camera vision. The robot handled line tracking, corridor tracking, and target shooting autonomously.",
         image: "assets/projects/valobot/img2.jpg",
@@ -126,6 +130,8 @@ const content = {
       },
       {
         title: "MPPT & Power Electronics PCB for a Solar Aircraft | Sola Project, EPFL",
+        category: "MAKE project",
+        date: "March 2024 – Present",
         description:
           "Power electronics work for a solar aircraft: design and assembly of the power circuit PCB, with a focus on the maximum power point tracker.",
         image: "assets/projects/sola/IMG1.JPEG",
@@ -134,6 +140,8 @@ const content = {
       },
       {
         title: "Autonomous Thymio Navigation with Vision & Sensor Fusion | EPFL",
+        category: "Mobile Robotics course project",
+        grade: "6/6",
         description:
           "Mobile robotics class project graded 6/6, where a Thymio robot navigates from start to goal using A* path planning, ArUco-based computer vision localization, EKF sensor fusion, ToF obstacle avoidance, kidnapping recovery, and automatic replanning.",
         image: "assets/thymio/video1-poster.jpg",
@@ -153,6 +161,8 @@ const content = {
       },
       {
         title: "2nd Place — Deep Learning for the UNO Vision Challenge: Card Recognition & Player Attribution | EPFL",
+        category: "Image Analysis and Pattern Recognition course project",
+        grade: "5.75/6",
         description:
           "Detected UNO cards on a table, classified each card and attributed the detected cards to the correct player.",
         websiteUrl: "assets/projects/image-analysis/UNO Vision Challenge.pdf",
@@ -168,6 +178,9 @@ const content = {
       },
       {
         title: "Statistical Data Analysis of Political Trading — Copycat Portfolios | EPFL",
+        category: "Applied Data Analysis course project",
+        date: "September 2025 – December 2025",
+        grade: "6/6",
         description:
           "EPFL statistical analysis project on financial data, investment strategy selection, and political trading performance, delivered with a demonstration website.",
         websiteUrl: "https://ada-2025-project-adaptateurusbversu.vercel.app/",
@@ -182,6 +195,8 @@ const content = {
       },
       {
         title: "High-Speed Autonomous Drone Gate Navigation | EPFL",
+        category: "Aerial Robotics course project",
+        grade: "5.25/6",
         description:
           "Aerial robotics course project graded 5.25/6, focused on fast autonomous gate navigation. I first developed a Webots simulation controller to detect gates and fly through them as quickly as possible, then worked in a team to transfer the approach to a real drone flying through physical gates.",
         image: "assets/projects/aerial/video1.mp4",
@@ -406,7 +421,7 @@ function renderProjects() {
           </div>
           ` : `<div class="project-carousel project-placeholder"><span>Photos coming soon</span></div>`}
           <div class="project-body">
-            ${project.category ? `<p class="project-meta">${project.category} | ${project.date}</p>` : ""}
+            <p class="project-meta">${[project.category, project.date, project.grade && `Grade: ${project.grade}`].filter(Boolean).join(" | ")}</p>
             <h3>${project.title}</h3>
             <p>
               ${project.description}
